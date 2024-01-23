@@ -29,7 +29,7 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-    buildFeatures{
+    buildFeatures {
         dataBinding true
     }
     lintOptions {
@@ -41,6 +41,8 @@ android {
 dependencies {
     implementation project(':SwiftKit:basick')
     implementation project(':SwiftKit:uicorek')
+    implementation project(':AUICoreKit:recyclerk')
+    implementation project(':AUICoreKit:vhk')
 
     //test
     testImplementation 'junit:junit:4.13.2'
