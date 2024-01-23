@@ -13,12 +13,12 @@ import androidx.recyclerview.widget.RecyclerView
 import com.mozhimen.basick.utilk.android.content.UtilKRes
 import com.mozhimen.basick.utilk.android.util.dp2px
 import com.mozhimen.basick.utilk.android.view.UtilKScreen
-import com.mozhimen.uicorek.adapterk.item.AdapterKItemRecyclerStuffed
 import com.mozhimen.logk.R
 import com.mozhimen.logk.bases.BaseLogKConfig
 import com.mozhimen.logk.bases.BaseLogKRecord
 import com.mozhimen.logk.commons.ILogKPrinter
 import com.mozhimen.logk.cons.CLogKCons
+import com.mozhimen.uicorek.recyclerk.item.AdapterKItemRecyclerStuffed
 
 /**
  * @ClassName ViewPrinterProvider
