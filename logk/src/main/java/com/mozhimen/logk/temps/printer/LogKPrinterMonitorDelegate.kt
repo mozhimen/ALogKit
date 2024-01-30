@@ -23,11 +23,11 @@ import com.mozhimen.basick.utilk.android.app.UtilKPermission
 import com.mozhimen.basick.utilk.android.app.UtilKLaunchActivity
 import com.mozhimen.basick.utilk.android.content.UtilKRes
 import com.mozhimen.basick.utilk.android.os.UtilKBuildVersion
-import com.mozhimen.basick.utilk.android.os.UtilKLooper
 import com.mozhimen.basick.utilk.android.util.et
 import com.mozhimen.basick.utilk.android.view.UtilKScreen
 import com.mozhimen.basick.utilk.android.view.UtilKWindowManager
 import com.mozhimen.basick.utilk.android.widget.showToastOnMain
+import com.mozhimen.basick.utilk.java.lang.UtilKThread
 import com.mozhimen.logk.LogK
 import com.mozhimen.logk.bases.BaseLogKConfig
 import com.mozhimen.logk.bases.BaseLogKRecord
@@ -111,7 +111,7 @@ class LogKPrinterMonitorDelegate : ILogKPrinter, ILogKPrinterMonitor, BaseUtilK(
 
     override fun print(config: BaseLogKConfig, priority: Int, tag: String, msg: String) {
         if (_isOpen) {
-            if (UtilKLooper.isMainThread()) {
+            if (UtilKThread.isMainThread()) {
                 printInView(priority, tag, msg)
             } else {
                 lifecycleScope.launch(Dispatchers.Main) {
@@ -208,15 +208,15 @@ class LogKPrinterMonitorDelegate : ILogKPrinter, ILogKPrinterMonitor, BaseUtilK(
             layoutParams.width = _titleView!!.width
             layoutParams.height = _titleView!!.height
         } else {
-            layoutParams.width = UtilKScreen.getWidthOfWindow()
-            layoutParams.height = UtilKScreen.getHeightOfWindow() / 3
+            layoutParams.width = UtilKScreen.getWidth()
+            layoutParams.height = UtilKScreen.getHeight() / 3
         }
         return layoutParams
     }
 
     private fun getWindowLayoutParams(isFold: Boolean): WindowManager.LayoutParams {
         _layoutParams.width = if (isFold) CWinMgr.Lp.WRAP_CONTENT else CWinMgr.Lp.MATCH_PARENT
-        _layoutParams.height = if (isFold) CWinMgr.Lp.WRAP_CONTENT else (UtilKScreen.getHeightOfWindow() / 3)
+        _layoutParams.height = if (isFold) CWinMgr.Lp.WRAP_CONTENT else (UtilKScreen.getHeight() / 3)
         return _layoutParams
     }
 
