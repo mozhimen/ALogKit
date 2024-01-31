@@ -38,7 +38,7 @@ class LogKPrinterItem<R : BaseLogKRecord>(private val _record: R) : RecyclerKIte
 
     @ColorInt
     fun getIntColorFor(@ALogPriority priority: Int): Int =
-        UtilKRes.getColor(
+        UtilKRes.gainColor(
             when (priority) {
                 CLogPriority.V -> com.mozhimen.logk.R.color.logk_v
                 CLogPriority.D -> com.mozhimen.logk.R.color.logk_d

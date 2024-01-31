@@ -33,8 +33,8 @@ class LogKPrinterViewProvider(
 ) : ILogKPrinter {
 
     private val _adapterKRecyclerStuffed by lazy { AdapterKItemRecyclerStuffed() }
-    private val TITLE_OPEN_PANEL by lazy { UtilKRes.getString(R.string.logk_view_provider_title_open) }
-    private val TITLE_CLOSE_PANEL by lazy { UtilKRes.getString(R.string.logk_view_provider_title_close) }
+    private val TITLE_OPEN_PANEL by lazy { UtilKRes.getStringOfContext(R.string.logk_view_provider_title_open) }
+    private val TITLE_CLOSE_PANEL by lazy { UtilKRes.getStringOfContext(R.string.logk_view_provider_title_close) }
 
     private var _recyclerView: RecyclerView? = null
         get() {
