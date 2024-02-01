@@ -47,8 +47,8 @@ import kotlinx.coroutines.launch
  */
 @AManifestKRequire(CPermission.SYSTEM_ALERT_WINDOW)
 class LogKPrinterMonitorDelegate : ILogKPrinter, ILogKPrinterMonitor, BaseUtilK(), LifecycleOwner {
-    private val TITLE_OPEN_PANEL by lazy { UtilKRes.getStringOfContext(com.mozhimen.logk.R.string.logk_view_provider_title_open) }
-    private val TITLE_CLOSE_PANEL by lazy { UtilKRes.getStringOfContext(com.mozhimen.logk.R.string.logk_view_provider_title_close) }
+    private val TITLE_OPEN_PANEL by lazy { UtilKRes.getString_ofContext(com.mozhimen.logk.R.string.logk_view_provider_title_open) }
+    private val TITLE_CLOSE_PANEL by lazy { UtilKRes.getString_ofContext(com.mozhimen.logk.R.string.logk_view_provider_title_close) }
 
     private val _layoutParams: WindowManager.LayoutParams by lazy { WindowManager.LayoutParams() }
     private var _rootView: FrameLayout? = null
