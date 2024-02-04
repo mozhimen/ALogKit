@@ -1,7 +1,7 @@
 package com.mozhimen.logk.temps.printer
 
 import android.app.Activity
-import com.mozhimen.basick.lintk.optin.OptInApiInit_InApplication
+import com.mozhimen.basick.lintk.optins.OApiInit_InApplication
 import com.mozhimen.basick.manifestk.annors.AManifestKRequire
 import com.mozhimen.basick.manifestk.cons.CPermission
 import com.mozhimen.basick.stackk.cb.StackKCb
@@ -20,7 +20,7 @@ import java.lang.ref.WeakReference
  * @Date 2022/9/22 15:52
  * @Version 1.0
  */
-@OptInApiInit_InApplication
+@OApiInit_InApplication
 @AManifestKRequire(CPermission.SYSTEM_ALERT_WINDOW)
 class LogKPrinterMonitor : ILogKPrinter, ILogKPrinterMonitor, IUtilK {
 

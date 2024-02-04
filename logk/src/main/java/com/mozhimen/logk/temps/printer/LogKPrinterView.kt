@@ -2,10 +2,10 @@ package com.mozhimen.logk.temps.printer
 
 import android.app.Activity
 import androidx.lifecycle.LifecycleOwner
-import com.mozhimen.basick.lintk.optin.OptInApiInit_ByLazy
+import com.mozhimen.basick.lintk.optins.OApiInit_ByLazy
 import com.mozhimen.basick.elemk.androidx.lifecycle.bases.BaseWakeBefPauseLifecycleObserver
-import com.mozhimen.basick.lintk.optin.OptInApiCall_BindLifecycle
-import com.mozhimen.basick.lintk.optin.OptInApiInit_InApplication
+import com.mozhimen.basick.lintk.optins.OApiCall_BindLifecycle
+import com.mozhimen.basick.lintk.optins.OApiInit_InApplication
 import com.mozhimen.basick.utilk.android.app.getContentView
 import com.mozhimen.logk.LogKMgr
 import com.mozhimen.logk.commons.ILogKPrinter
@@ -18,7 +18,7 @@ import com.mozhimen.logk.bases.BaseLogKConfig
  * @Date 2021/12/20 17:20
  * @Version 1.0
  */
-@OptIn(OptInApiInit_ByLazy::class, OptInApiCall_BindLifecycle::class, OptInApiInit_InApplication::class)
+@OptIn(OApiInit_ByLazy::class, OApiCall_BindLifecycle::class, OApiInit_InApplication::class)
 class LogKPrinterView<A>(owner: A) : ILogKPrinter, BaseWakeBefPauseLifecycleObserver() where A : Activity, A : LifecycleOwner {
     private val _viewProvider: LogKPrinterViewProvider by lazy { LogKPrinterViewProvider(owner, owner.getContentView()) }
     private var _isFold = false

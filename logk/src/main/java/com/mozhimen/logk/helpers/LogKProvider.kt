@@ -2,7 +2,7 @@ package com.mozhimen.logk.helpers
 
 import com.mozhimen.basick.elemk.android.util.annors.ALogPriority
 import com.mozhimen.basick.elemk.android.util.cons.CLogPriority
-import com.mozhimen.basick.lintk.optin.OptInApiInit_InApplication
+import com.mozhimen.basick.lintk.optins.OApiInit_InApplication
 import com.mozhimen.basick.utilk.bases.IUtilK
 import com.mozhimen.basick.utilk.java.lang.UtilKStackTraceElement
 import com.mozhimen.basick.utilk.kotlin.getStrPackage
@@ -23,7 +23,7 @@ import java.lang.StringBuilder
  * @Date 2023/8/10 18:06
  * @Version 1.0
  */
-@OptIn(OptInApiInit_InApplication::class)
+@OptIn(OApiInit_InApplication::class)
 class LogKProvider : ILogK, IUtilK {
     private val _logKPackageName: String by lazy { LogK::class.java.getStrPackage() }
     private val _logKFormatterThread: LogKFormatterThread by lazy { LogKFormatterThread() }
