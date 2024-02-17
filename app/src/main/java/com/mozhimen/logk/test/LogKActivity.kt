@@ -7,7 +7,7 @@ import com.mozhimen.basick.manifestk.permission.annors.APermissionCheck
 import com.mozhimen.basick.manifestk.cons.CPermission
 import com.mozhimen.basick.manifestk.annors.AManifestKRequire
 import com.mozhimen.basick.elemk.android.util.cons.CLogPriority
-import com.mozhimen.basick.lintk.optin.OptInApiInit_InApplication
+import com.mozhimen.basick.lintk.optins.OApiInit_InApplication
 import com.mozhimen.logk.LogK
 import com.mozhimen.logk.LogKMgr
 import com.mozhimen.logk.bases.BaseLogKConfig
@@ -16,7 +16,7 @@ import com.mozhimen.logk.temps.printer.LogKPrinterView
 import com.mozhimen.logk.test.databinding.ActivityLogkBinding
 
 
-@OptIn(OptInApiInit_InApplication::class)
+@OptIn(OApiInit_InApplication::class)
 @AManifestKRequire(CPermission.SYSTEM_ALERT_WINDOW)
 @APermissionCheck(CPermission.SYSTEM_ALERT_WINDOW)
 class LogKActivity : BaseActivityVB<ActivityLogkBinding>() {

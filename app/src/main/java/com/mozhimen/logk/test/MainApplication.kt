@@ -1,8 +1,8 @@
 package com.mozhimen.logk.test
 
 import com.mozhimen.basick.elemk.android.app.bases.BaseApplication
-import com.mozhimen.basick.lintk.optin.OptInApiInit_InApplication
-import com.mozhimen.basick.lintk.optin.OptInApiMultiDex_InApplication
+import com.mozhimen.basick.lintk.optins.OApiInit_InApplication
+import com.mozhimen.basick.lintk.optins.OApiMultiDex_InApplication
 import com.mozhimen.basick.manifestk.annors.AManifestKRequire
 import com.mozhimen.basick.manifestk.cons.CPermission
 import com.mozhimen.basick.utilk.squareup.moshi.t2strJsonMoshi
@@ -20,10 +20,10 @@ import com.mozhimen.logk.temps.printer.LogKPrinterMonitor
  * @Date 2024/1/21 14:57
  * @Version 1.0
  */
-@OptIn(OptInApiMultiDex_InApplication::class)
-@OptInApiInit_InApplication
+@OptIn(OApiMultiDex_InApplication::class)
 @AManifestKRequire(CPermission.SYSTEM_ALERT_WINDOW)
 class MainApplication : BaseApplication() {
+    @OptIn(OApiInit_InApplication::class)
     override fun onCreate() {
         super.onCreate()
 

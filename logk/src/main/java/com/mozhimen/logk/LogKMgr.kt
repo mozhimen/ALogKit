@@ -1,6 +1,6 @@
 package com.mozhimen.logk
 
-import com.mozhimen.basick.lintk.optin.OptInApiInit_InApplication
+import com.mozhimen.basick.lintk.optins.OApiInit_InApplication
 import com.mozhimen.basick.utilk.kotlin.collections.containsBy
 import com.mozhimen.logk.commons.ILogKPrinter
 import com.mozhimen.logk.bases.BaseLogKConfig
@@ -28,7 +28,7 @@ import com.mozhimen.logk.temps.printer.LogKPrinterConsole
  * @Date 2021/12/20 21:58
  * @Version 1.0
  */
-@OptInApiInit_InApplication
+@OApiInit_InApplication
 class LogKMgr(/*private val config: LogKConfig, printers: Array<out IPrinter>*/) : ILogKMgr {
     companion object {
         @JvmStatic
