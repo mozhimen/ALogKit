@@ -16,7 +16,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.mozhimen.basick.elemk.android.view.cons.CWinMgr
 import com.mozhimen.basick.elemk.kotlin.properties.VarProperty_SetVaryNonnull
-import com.mozhimen.basick.manifestk.annors.AManifestKRequire
+import com.mozhimen.basick.lintk.optins.permission.OPermission_SYSTEM_ALERT_WINDOW
 import com.mozhimen.basick.manifestk.cons.CPermission
 import com.mozhimen.basick.utilk.bases.BaseUtilK
 import com.mozhimen.basick.utilk.android.app.UtilKPermission
@@ -45,7 +45,7 @@ import kotlinx.coroutines.launch
  * @Date 2022/9/23 18:52
  * @Version 1.0
  */
-@AManifestKRequire(CPermission.SYSTEM_ALERT_WINDOW)
+@OPermission_SYSTEM_ALERT_WINDOW
 class LogKPrinterMonitorDelegate : ILogKPrinter, ILogKPrinterMonitor, BaseUtilK(), LifecycleOwner {
     private val TITLE_OPEN_PANEL by lazy { UtilKRes.getString_ofContext(com.mozhimen.logk.R.string.logk_view_provider_title_open) }
     private val TITLE_CLOSE_PANEL by lazy { UtilKRes.getString_ofContext(com.mozhimen.logk.R.string.logk_view_provider_title_close) }
