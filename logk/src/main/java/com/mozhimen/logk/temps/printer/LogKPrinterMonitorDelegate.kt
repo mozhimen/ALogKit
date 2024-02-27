@@ -17,7 +17,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.mozhimen.basick.elemk.android.view.cons.CWinMgr
 import com.mozhimen.basick.elemk.kotlin.properties.VarProperty_SetVaryNonnull
 import com.mozhimen.basick.lintk.optins.permission.OPermission_SYSTEM_ALERT_WINDOW
-import com.mozhimen.basick.manifestk.cons.CPermission
 import com.mozhimen.basick.utilk.bases.BaseUtilK
 import com.mozhimen.basick.utilk.android.app.UtilKPermission
 import com.mozhimen.basick.utilk.android.app.UtilKLaunchActivity
@@ -27,7 +26,9 @@ import com.mozhimen.basick.utilk.android.util.et
 import com.mozhimen.basick.utilk.android.view.UtilKScreen
 import com.mozhimen.basick.utilk.android.view.UtilKWindowManager
 import com.mozhimen.basick.utilk.android.widget.showToastOnMain
-import com.mozhimen.basick.utilk.androidx.lifecycle.handleLifecycleEventDestroyed
+import com.mozhimen.basick.utilk.androidx.lifecycle.handleLifecycleEventOnDestroy
+import com.mozhimen.basick.utilk.androidx.lifecycle.handleLifecycleEventOnStart
+import com.mozhimen.basick.utilk.androidx.lifecycle.handleLifecycleEventOnStop
 import com.mozhimen.basick.utilk.java.lang.UtilKThread
 import com.mozhimen.logk.LogK
 import com.mozhimen.logk.bases.BaseLogKConfig
@@ -87,7 +88,7 @@ class LogKPrinterMonitorDelegate : ILogKPrinter, ILogKPrinterMonitor, BaseUtilK(
         }
 
     private var _isOpen by VarProperty_SetVaryNonnull(false) { _, value ->
-        if (value) lifecycleRegistry.handleLifecycleEvent(Lifecycle.Event.ON_START) else lifecycleRegistry.handleLifecycleEventDestroyed()
+        if (value) lifecycleRegistry.handleLifecycleEventOnStart() else lifecycleRegistry.handleLifecycleEventOnStop()
         true
     }
 
