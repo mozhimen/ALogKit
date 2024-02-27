@@ -27,6 +27,7 @@ import com.mozhimen.basick.utilk.android.util.et
 import com.mozhimen.basick.utilk.android.view.UtilKScreen
 import com.mozhimen.basick.utilk.android.view.UtilKWindowManager
 import com.mozhimen.basick.utilk.android.widget.showToastOnMain
+import com.mozhimen.basick.utilk.androidx.lifecycle.handleLifecycleEventDestroyed
 import com.mozhimen.basick.utilk.java.lang.UtilKThread
 import com.mozhimen.logk.LogK
 import com.mozhimen.logk.bases.BaseLogKConfig
@@ -86,7 +87,7 @@ class LogKPrinterMonitorDelegate : ILogKPrinter, ILogKPrinterMonitor, BaseUtilK(
         }
 
     private var _isOpen by VarProperty_SetVaryNonnull(false) { _, value ->
-        if (value) lifecycleRegistry.handleLifecycleEvent(Lifecycle.Event.ON_START) else lifecycleRegistry.handleLifecycleEvent(Lifecycle.Event.ON_DESTROY)
+        if (value) lifecycleRegistry.handleLifecycleEvent(Lifecycle.Event.ON_START) else lifecycleRegistry.handleLifecycleEventDestroyed()
         true
     }
 
