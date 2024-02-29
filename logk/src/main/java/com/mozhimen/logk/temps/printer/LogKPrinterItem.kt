@@ -9,7 +9,7 @@ import com.mozhimen.basick.utilk.android.content.UtilKPackage
 import com.mozhimen.basick.utilk.android.content.UtilKRes
 import com.mozhimen.basick.utilk.kotlin.text.replaceRegexLineBreak
 import com.mozhimen.uicorek.recyclerk.item.RecyclerKItem
-import com.mozhimen.uicorek.vhk.BaseVHKRecyclerVB
+import com.mozhimen.uicorek.vhk.VHKRecyclerVB
 import com.mozhimen.logk.bases.BaseLogKRecord
 import com.mozhimen.logk.databinding.LogkPrinterViewItemBinding
 
@@ -20,8 +20,8 @@ import com.mozhimen.logk.databinding.LogkPrinterViewItemBinding
  * @Date 2022/9/23 11:51
  * @Version 1.0
  */
-class LogKPrinterItem<R : BaseLogKRecord>(private val _record: R) : RecyclerKItem<BaseVHKRecyclerVB<LogkPrinterViewItemBinding>>() {
-    override fun onBindItem(holder: BaseVHKRecyclerVB<LogkPrinterViewItemBinding>, position: Int) {
+class LogKPrinterItem<R : BaseLogKRecord>(private val _record: R) : RecyclerKItem<VHKRecyclerVB<LogkPrinterViewItemBinding>>() {
+    override fun onBindItem(holder: VHKRecyclerVB<LogkPrinterViewItemBinding>, position: Int) {
         super.onBindItem(holder, position)
         val intColor = getIntColorFor(_record.priority)
         holder.vb.logkPrinterViewTag.text = _record.getFlattened()
@@ -30,8 +30,8 @@ class LogKPrinterItem<R : BaseLogKRecord>(private val _record: R) : RecyclerKIte
         holder.vb.logkPrinterViewMsg.setTextColor(intColor)
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup): BaseVHKRecyclerVB<LogkPrinterViewItemBinding> =
-        BaseVHKRecyclerVB(LayoutInflater.from(parent.context).inflate(getItemLayoutId(), parent, false))
+    override fun onCreateViewHolder(parent: ViewGroup): VHKRecyclerVB<LogkPrinterViewItemBinding> =
+        VHKRecyclerVB(LayoutInflater.from(parent.context).inflate(getItemLayoutId(), parent, false))
 
     override fun getItemLayoutId(): Int =
         com.mozhimen.logk.R.layout.logk_printer_view_item
