@@ -2,7 +2,7 @@ package com.mozhimen.logk.test
 
 import android.os.Bundle
 import android.util.Log
-import com.mozhimen.basick.elemk.androidx.appcompat.bases.databinding.BaseActivityVB
+import com.mozhimen.basick.elemk.androidx.appcompat.bases.databinding.BaseActivityVDB
 import com.mozhimen.basick.manifestk.permission.annors.APermissionCheck
 import com.mozhimen.basick.manifestk.cons.CPermission
 import com.mozhimen.basick.manifestk.annors.AManifestKRequire
@@ -19,7 +19,7 @@ import com.mozhimen.logk.test.databinding.ActivityLogkBinding
 @OptIn(OApiInit_InApplication::class)
 @AManifestKRequire(CPermission.SYSTEM_ALERT_WINDOW)
 @APermissionCheck(CPermission.SYSTEM_ALERT_WINDOW)
-class LogKActivity : BaseActivityVB<ActivityLogkBinding>() {
+class LogKActivity : BaseActivityVDB<ActivityLogkBinding>() {
     private val _printerView: LogKPrinterView<LogKActivity> by lazy { LogKPrinterView(this) }
     private val _printerMonitor: LogKPrinterMonitor by lazy {
         LogKMgr.instance.getPrinters().filterIsInstance<LogKPrinterMonitor>().getOrNull(0) ?: kotlin.run {
@@ -32,10 +32,10 @@ class LogKActivity : BaseActivityVB<ActivityLogkBinding>() {
         initPrinterView()
         initPrinterMonitor()
 
-        vb.logkBtnPrint.setOnClickListener {
+        vdb.logkBtnPrint.setOnClickListener {
             printLog()
         }
-        vb.logkBtnPrinterList.setOnClickListener {
+        vdb.logkBtnPrinterList.setOnClickListener {
             printLog1()
         }
     }

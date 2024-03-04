@@ -9,7 +9,7 @@ import com.mozhimen.basick.utilk.android.content.UtilKPackage
 import com.mozhimen.basick.utilk.android.content.UtilKRes
 import com.mozhimen.basick.utilk.kotlin.text.replaceRegexLineBreak
 import com.mozhimen.uicorek.recyclerk.item.RecyclerKItem
-import com.mozhimen.uicorek.vhk.VHKRecyclerVB
+import com.mozhimen.uicorek.vhk.VHKRecyclerVDB
 import com.mozhimen.logk.bases.BaseLogKRecord
 import com.mozhimen.logk.databinding.LogkPrinterViewItemBinding
 
@@ -20,18 +20,18 @@ import com.mozhimen.logk.databinding.LogkPrinterViewItemBinding
  * @Date 2022/9/23 11:51
  * @Version 1.0
  */
-class LogKPrinterItem<R : BaseLogKRecord>(private val _record: R) : RecyclerKItem<VHKRecyclerVB<LogkPrinterViewItemBinding>>() {
-    override fun onBindItem(holder: VHKRecyclerVB<LogkPrinterViewItemBinding>, position: Int) {
+class LogKPrinterItem<R : BaseLogKRecord>(private val _record: R) : RecyclerKItem<VHKRecyclerVDB<LogkPrinterViewItemBinding>>() {
+    override fun onBindItem(holder: VHKRecyclerVDB<LogkPrinterViewItemBinding>, position: Int) {
         super.onBindItem(holder, position)
         val intColor = getIntColorFor(_record.priority)
-        holder.vb.logkPrinterViewTag.text = _record.getFlattened()
-        holder.vb.logkPrinterViewTag.setTextColor(intColor)
-        holder.vb.logkPrinterViewMsg.text = _record.msg.replaceRegexLineBreak().replace(UtilKPackage.getPackageName(), "")
-        holder.vb.logkPrinterViewMsg.setTextColor(intColor)
+        holder.vdb.logkPrinterViewTag.text = _record.getFlattened()
+        holder.vdb.logkPrinterViewTag.setTextColor(intColor)
+        holder.vdb.logkPrinterViewMsg.text = _record.msg.replaceRegexLineBreak().replace(UtilKPackage.getPackageName(), "")
+        holder.vdb.logkPrinterViewMsg.setTextColor(intColor)
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup): VHKRecyclerVB<LogkPrinterViewItemBinding> =
-        VHKRecyclerVB(LayoutInflater.from(parent.context).inflate(getItemLayoutId(), parent, false))
+    override fun onCreateViewHolder(parent: ViewGroup): VHKRecyclerVDB<LogkPrinterViewItemBinding> =
+        VHKRecyclerVDB(LayoutInflater.from(parent.context).inflate(getItemLayoutId(), parent, false))
 
     override fun getItemLayoutId(): Int =
         com.mozhimen.logk.R.layout.logk_printer_view_item
