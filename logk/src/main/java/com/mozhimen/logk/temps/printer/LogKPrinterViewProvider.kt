@@ -18,7 +18,7 @@ import com.mozhimen.logk.bases.BaseLogKConfig
 import com.mozhimen.logk.bases.BaseLogKRecord
 import com.mozhimen.logk.commons.ILogKPrinter
 import com.mozhimen.logk.cons.CLogKCons
-import com.mozhimen.uicorek.recyclerk.item.AdapterKItemRecyclerStuffed
+import com.mozhimen.xmlk.recyclerk.item.AdapterKItemRecyclerStuffed
 
 /**
  * @ClassName ViewPrinterProvider

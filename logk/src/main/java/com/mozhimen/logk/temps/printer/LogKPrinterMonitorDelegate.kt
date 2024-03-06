@@ -36,7 +36,7 @@ import com.mozhimen.logk.bases.BaseLogKRecord
 import com.mozhimen.logk.commons.ILogKPrinter
 import com.mozhimen.logk.commons.ILogKPrinterMonitor
 import com.mozhimen.logk.cons.CLogKCons
-import com.mozhimen.uicorek.recyclerk.item.AdapterKItemRecycler
+import com.mozhimen.xmlk.recyclerk.item.AdapterKItemRecycler
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 

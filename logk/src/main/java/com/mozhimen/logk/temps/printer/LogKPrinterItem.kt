@@ -8,8 +8,8 @@ import com.mozhimen.basick.elemk.android.util.cons.CLogPriority
 import com.mozhimen.basick.utilk.android.content.UtilKPackage
 import com.mozhimen.basick.utilk.android.content.UtilKRes
 import com.mozhimen.basick.utilk.kotlin.text.replaceRegexLineBreak
-import com.mozhimen.uicorek.recyclerk.item.RecyclerKItem
-import com.mozhimen.uicorek.vhk.VHKRecyclerVDB
+import com.mozhimen.xmlk.recyclerk.item.RecyclerKItem
+import com.mozhimen.xmlk.vhk.VHKRecyclerVDB
 import com.mozhimen.logk.bases.BaseLogKRecord
 import com.mozhimen.logk.databinding.LogkPrinterViewItemBinding
 
