@@ -6,7 +6,7 @@ import com.mozhimen.basick.lintk.optins.permission.OPermission_SYSTEM_ALERT_WIND
 import com.mozhimen.basick.manifestk.cons.CPermission
 import com.mozhimen.basick.stackk.cb.StackKCb
 import com.mozhimen.basick.stackk.commons.IStackKListener
-import com.mozhimen.basick.utilk.bases.IUtilK
+import com.mozhimen.basick.utilk.commons.IUtilK
 import com.mozhimen.logk.LogK
 import com.mozhimen.logk.bases.BaseLogKConfig
 import com.mozhimen.logk.commons.ILogKPrinter

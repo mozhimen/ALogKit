@@ -3,7 +3,7 @@ package com.mozhimen.logk.helpers
 import com.mozhimen.basick.elemk.android.util.annors.ALogPriority
 import com.mozhimen.basick.elemk.android.util.cons.CLogPriority
 import com.mozhimen.basick.lintk.optins.OApiInit_InApplication
-import com.mozhimen.basick.utilk.bases.IUtilK
+import com.mozhimen.basick.utilk.commons.IUtilK
 import com.mozhimen.basick.utilk.java.lang.UtilKStackTraceElement
 import com.mozhimen.basick.utilk.kotlin.getStrPackage
 import com.mozhimen.logk.LogK
