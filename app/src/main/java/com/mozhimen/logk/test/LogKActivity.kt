@@ -1,13 +1,12 @@
 package com.mozhimen.logk.test
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.util.Log
 import com.mozhimen.basick.elemk.androidx.appcompat.bases.databinding.BaseActivityVDB
-import com.mozhimen.basick.manifestk.permission.annors.APermissionCheck
-import com.mozhimen.basick.manifestk.cons.CPermission
-import com.mozhimen.basick.manifestk.annors.AManifestKRequire
 import com.mozhimen.basick.elemk.android.util.cons.CLogPriority
 import com.mozhimen.basick.lintk.optins.OApiInit_InApplication
+import com.mozhimen.basick.lintk.optins.permission.OPermission_SYSTEM_ALERT_WINDOW
 import com.mozhimen.logk.LogK
 import com.mozhimen.logk.LogKMgr
 import com.mozhimen.logk.bases.BaseLogKConfig
@@ -15,10 +14,7 @@ import com.mozhimen.logk.temps.printer.LogKPrinterMonitor
 import com.mozhimen.logk.temps.printer.LogKPrinterView
 import com.mozhimen.logk.test.databinding.ActivityLogkBinding
 
-
-@OptIn(OApiInit_InApplication::class)
-@AManifestKRequire(CPermission.SYSTEM_ALERT_WINDOW)
-@APermissionCheck(CPermission.SYSTEM_ALERT_WINDOW)
+@OptIn(OApiInit_InApplication::class, OPermission_SYSTEM_ALERT_WINDOW::class)
 class LogKActivity : BaseActivityVDB<ActivityLogkBinding>() {
     private val _printerView: LogKPrinterView<LogKActivity> by lazy { LogKPrinterView(this) }
     private val _printerMonitor: LogKPrinterMonitor by lazy {
