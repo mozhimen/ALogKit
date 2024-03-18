@@ -3,8 +3,8 @@ package com.mozhimen.logk.temps.printer
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.annotation.ColorInt
-import com.mozhimen.basick.elemk.android.util.annors.ALogPriority
-import com.mozhimen.basick.elemk.android.util.cons.CLogPriority
+import com.mozhimen.basick.elemk.android.util.annors.ALog
+import com.mozhimen.basick.elemk.android.util.cons.CLog
 import com.mozhimen.basick.utilk.android.content.UtilKPackage
 import com.mozhimen.basick.utilk.android.content.UtilKRes
 import com.mozhimen.basick.utilk.kotlin.text.replaceRegexLineBreak
@@ -37,14 +37,14 @@ class LogKPrinterItem<R : BaseLogKRecord>(private val _record: R) : RecyclerKIte
         com.mozhimen.logk.R.layout.logk_printer_view_item
 
     @ColorInt
-    fun getIntColorFor(@ALogPriority priority: Int): Int =
+    fun getIntColorFor(@ALog priority: Int): Int =
         UtilKRes.gainColor(
             when (priority) {
-                CLogPriority.V -> com.mozhimen.logk.R.color.logk_v
-                CLogPriority.D -> com.mozhimen.logk.R.color.logk_d
-                CLogPriority.I -> com.mozhimen.logk.R.color.logk_i
-                CLogPriority.W -> com.mozhimen.logk.R.color.logk_w
-                CLogPriority.E -> com.mozhimen.logk.R.color.logk_e
+                CLog.VERBOSE -> com.mozhimen.logk.R.color.logk_v
+                CLog.DEBUG -> com.mozhimen.logk.R.color.logk_d
+                CLog.INFO -> com.mozhimen.logk.R.color.logk_i
+                CLog.WARN -> com.mozhimen.logk.R.color.logk_w
+                CLog.ERROR -> com.mozhimen.logk.R.color.logk_e
                 else -> -0x100
             }
         )

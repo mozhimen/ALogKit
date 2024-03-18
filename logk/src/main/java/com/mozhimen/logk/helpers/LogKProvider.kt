@@ -1,7 +1,7 @@
 package com.mozhimen.logk.helpers
 
-import com.mozhimen.basick.elemk.android.util.annors.ALogPriority
-import com.mozhimen.basick.elemk.android.util.cons.CLogPriority
+import com.mozhimen.basick.elemk.android.util.annors.ALog
+import com.mozhimen.basick.elemk.android.util.cons.CLog
 import com.mozhimen.basick.lintk.optins.OApiInit_InApplication
 import com.mozhimen.basick.utilk.commons.IUtilK
 import com.mozhimen.basick.utilk.java.lang.UtilKStackTraceElement
@@ -30,62 +30,62 @@ class LogKProvider : ILogK, IUtilK {
     private val _logKFormatterStackTraces: LogKFormatterStackTraces by lazy { LogKFormatterStackTraces() }
 
     override fun vk(vararg contents: Any) {
-        logk(CLogPriority.V, *contents)
+        logk(CLog.VERBOSE, *contents)
     }
 
     override fun vtk(tag: String, vararg contents: Any) {
-        logk(CLogPriority.V, tag, *contents)
+        logk(CLog.VERBOSE, tag, *contents)
     }
 
     override fun dk(vararg contents: Any) {
-        logk(CLogPriority.D, *contents)
+        logk(CLog.DEBUG, *contents)
     }
 
     override fun dtk(tag: String, vararg contents: Any) {
-        logk(CLogPriority.D, tag, *contents)
+        logk(CLog.DEBUG, tag, *contents)
     }
 
     override fun ik(vararg contents: Any) {
-        logk(CLogPriority.I, *contents)
+        logk(CLog.INFO, *contents)
     }
 
     override fun itk(tag: String, vararg contents: Any) {
-        logk(CLogPriority.I, tag, *contents)
+        logk(CLog.INFO, tag, *contents)
     }
 
     override fun wk(vararg contents: Any) {
-        logk(CLogPriority.W, *contents)
+        logk(CLog.WARN, *contents)
     }
 
     override fun wtk(tag: String, vararg contents: Any) {
-        logk(CLogPriority.W, tag, *contents)
+        logk(CLog.WARN, tag, *contents)
     }
 
     override fun ek(vararg contents: Any) {
-        logk(CLogPriority.E, *contents)
+        logk(CLog.ERROR, *contents)
     }
 
     override fun etk(tag: String, vararg contents: Any) {
-        logk(CLogPriority.E, tag, *contents)
+        logk(CLog.ERROR, tag, *contents)
     }
 
     override fun ak(vararg contents: Any) {
-        logk(CLogPriority.A, *contents)
+        logk(CLog.ASSERT, *contents)
     }
 
     override fun atk(tag: String, vararg contents: Any) {
-        logk(CLogPriority.A, tag, *contents)
+        logk(CLog.ASSERT, tag, *contents)
     }
 
-    override fun logk(@ALogPriority priority: Int, vararg contents: Any) {
+    override fun logk(@ALog priority: Int, vararg contents: Any) {
         logk(priority, LogKMgr.instance.getConfig().getGlobalTag(), contents)
     }
 
-    override fun logk(@ALogPriority priority: Int, tag: String, vararg contents: Any) {
+    override fun logk(@ALog priority: Int, tag: String, vararg contents: Any) {
         logk(LogKMgr.instance.getConfig(), priority, tag, *contents)
     }
 
-    override fun logk(config: BaseLogKConfig, @ALogPriority priority: Int, tag: String, vararg contents: Any?) {
+    override fun logk(config: BaseLogKConfig, @ALog priority: Int, tag: String, vararg contents: Any?) {
         if (!config.isEnable()) return
 
         val stringBuilder = StringBuilder()
@@ -93,7 +93,7 @@ class LogKProvider : ILogK, IUtilK {
             val threadInfo: String = _logKFormatterThread.format(Thread.currentThread())
             stringBuilder.append(threadInfo).append("\n")
         }
-        if (config.getStackTraceDepth() > 0 || (config.getStackTraceDepth() <= 0 && priority >= CLogPriority.E)) {
+        if (config.getStackTraceDepth() > 0 || (config.getStackTraceDepth() <= 0 && priority >= CLog.ERROR)) {
             val stackTrace: String? = _logKFormatterStackTraces.format(
                 UtilKStackTraceElement.getCroppedRealStackTracks(
                     Throwable().stackTrace, _logKPackageName,

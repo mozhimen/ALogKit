@@ -22,7 +22,7 @@ import com.mozhimen.basick.utilk.android.app.UtilKPermission
 import com.mozhimen.basick.utilk.android.app.UtilKLaunchActivity
 import com.mozhimen.basick.utilk.android.content.UtilKRes
 import com.mozhimen.basick.utilk.android.os.UtilKBuildVersion
-import com.mozhimen.basick.utilk.android.util.et
+import com.mozhimen.basick.utilk.android.util.e
 import com.mozhimen.basick.utilk.android.view.UtilKScreen
 import com.mozhimen.basick.utilk.android.view.UtilKWindowManager
 import com.mozhimen.basick.utilk.android.widget.showToastOnMain
@@ -156,7 +156,7 @@ class LogKPrinterMonitorDelegate : ILogKPrinter, ILogKPrinterMonitor, BaseUtilK(
             else unfold()
         } catch (e: Exception) {
             e.printStackTrace()
-            e.message?.et(TAG)
+            e.message?.e(TAG)
         }
         _isOpen = true
     }
@@ -168,7 +168,7 @@ class LogKPrinterMonitorDelegate : ILogKPrinter, ILogKPrinterMonitor, BaseUtilK(
             _windowManager.removeView(_rootView)
         } catch (e: Exception) {
             e.printStackTrace()
-            e.message?.et(TAG)
+            e.message?.e(TAG)
         }
         _isOpen = false
     }

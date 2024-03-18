@@ -1,6 +1,6 @@
 package com.mozhimen.logk.commons
 
-import com.mozhimen.basick.elemk.android.util.annors.ALogPriority
+import com.mozhimen.basick.elemk.android.util.annors.ALog
 import com.mozhimen.logk.bases.BaseLogKConfig
 
 
@@ -25,8 +25,8 @@ interface ILogK {
     fun etk(tag: String, vararg contents: Any)
     fun ak(vararg contents: Any)
     fun atk(tag: String, vararg contents: Any)
-    fun logk(@ALogPriority priority: Int, vararg contents: Any)
-    fun logk(@ALogPriority priority: Int, tag: String, vararg contents: Any)
+    fun logk(@ALog priority: Int, vararg contents: Any)
+    fun logk(@ALog priority: Int, tag: String, vararg contents: Any)
     /**
      * log实现
      * @param config LogKConfig
@@ -34,5 +34,5 @@ interface ILogK {
      * @param tag String
      * @param contents Array<out Any?>
      */
-    fun logk(config: BaseLogKConfig, @ALogPriority priority: Int, tag: String, vararg contents: Any?)
+    fun logk(config: BaseLogKConfig, @ALog priority: Int, tag: String, vararg contents: Any?)
 }

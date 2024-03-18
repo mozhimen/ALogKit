@@ -5,7 +5,7 @@ import com.mozhimen.basick.utilk.bases.BaseUtilK
 import com.mozhimen.logk.commons.ILogKPrinter
 import com.mozhimen.logk.bases.BaseLogKConfig
 import com.mozhimen.basick.utilk.java.io.UtilKFile
-import com.mozhimen.basick.utilk.android.util.et
+import com.mozhimen.basick.utilk.android.util.e
 import com.mozhimen.basick.utilk.java.io.getFileCreateTime
 import com.mozhimen.basick.utilk.kotlin.UtilKStrPath
 import com.mozhimen.basick.utilk.kotlin.createFolder
@@ -103,7 +103,7 @@ open class LogKPrinterFile() : ILogKPrinter, BaseUtilK() {
                 _logQueue.put(log)
             } catch (e: InterruptedException) {
                 e.printStackTrace()
-                e.message?.et(TAG)
+                e.message?.e(TAG)
             }
         }
 
@@ -137,7 +137,7 @@ open class LogKPrinterFile() : ILogKPrinter, BaseUtilK() {
                 }
             } catch (e: InterruptedException) {
                 e.printStackTrace()
-                e.message?.et(TAG)
+                e.message?.e(TAG)
                 synchronized(this) { _isRunning = false }
             }
         }
@@ -209,7 +209,7 @@ open class LogKPrinterFile() : ILogKPrinter, BaseUtilK() {
                 _bufferedWriter = BufferedWriter(FileWriter(_logFile, true))
             } catch (e: Exception) {
                 e.printStackTrace()
-                e.message?.et(TAG)
+                e.message?.e(TAG)
                 _preFileName = null
                 _logFile = null
                 return false
@@ -226,7 +226,7 @@ open class LogKPrinterFile() : ILogKPrinter, BaseUtilK() {
                     _bufferedWriter!!.close()
                 } catch (e: IOException) {
                     e.printStackTrace()
-                    e.message?.et(TAG)
+                    e.message?.e(TAG)
                     return false
                 } finally {
                     _bufferedWriter = null
@@ -251,7 +251,7 @@ open class LogKPrinterFile() : ILogKPrinter, BaseUtilK() {
                 }
             } catch (e: IOException) {
                 e.printStackTrace()
-                e.message?.et(TAG)
+                e.message?.e(TAG)
             }
         }
     }

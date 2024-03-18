@@ -37,7 +37,7 @@ class LogKPrinterMonitor : ILogKPrinter, ILogKPrinterMonitor, IUtilK {
                 }
 //                if (isFront) {
 //                    if (_isShow) {
-//                        LogK.dt(TAG, "PrinterMonitor onChanged log start")
+//                        LogK.d(TAG, "PrinterMonitor onChanged log start")
 //                        _printerMonitorProvider.openMonitor(true)
 //                    }
 //                }

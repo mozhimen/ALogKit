@@ -4,7 +4,7 @@ import android.annotation.SuppressLint
 import android.os.Bundle
 import android.util.Log
 import com.mozhimen.basick.elemk.androidx.appcompat.bases.databinding.BaseActivityVDB
-import com.mozhimen.basick.elemk.android.util.cons.CLogPriority
+import com.mozhimen.basick.elemk.android.util.cons.CLog
 import com.mozhimen.basick.lintk.optins.OApiInit_InApplication
 import com.mozhimen.basick.lintk.optins.permission.OPermission_SYSTEM_ALERT_WINDOW
 import com.mozhimen.logk.LogK
@@ -51,7 +51,7 @@ class LogKActivity : BaseActivityVDB<ActivityLogkBinding>() {
         LogK.ik("just a test1!")
 
         //中级用法
-        LogK.logk(CLogPriority.W, TAG, "just a test2!")
+        LogK.logk(CLog.W, TAG, "just a test2!")
 
         //高级用法
         LogK.logk(object : BaseLogKConfig() {
@@ -60,7 +60,7 @@ class LogKActivity : BaseActivityVDB<ActivityLogkBinding>() {
 
             override fun getStackTraceDepth(): Int =
                 5
-        }, CLogPriority.E, TAG, "just a test3!")
+        }, CLog.E, TAG, "just a test3!")
     }
 
     private fun printLog1() {
