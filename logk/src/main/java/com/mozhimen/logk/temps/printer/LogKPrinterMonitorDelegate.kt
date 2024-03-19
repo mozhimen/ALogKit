@@ -18,15 +18,14 @@ import com.mozhimen.basick.elemk.android.view.cons.CWinMgr
 import com.mozhimen.basick.elemk.kotlin.properties.VarProperty_SetVaryNonnull
 import com.mozhimen.basick.lintk.optins.permission.OPermission_SYSTEM_ALERT_WINDOW
 import com.mozhimen.basick.utilk.bases.BaseUtilK
-import com.mozhimen.basick.utilk.android.app.UtilKPermission
-import com.mozhimen.basick.utilk.android.app.UtilKLaunchActivity
+import com.mozhimen.basick.utilk.android.UtilKPermission
+import com.mozhimen.basick.utilk.android.app.UtilKActivityStart
 import com.mozhimen.basick.utilk.android.content.UtilKRes
 import com.mozhimen.basick.utilk.android.os.UtilKBuildVersion
 import com.mozhimen.basick.utilk.android.util.e
 import com.mozhimen.basick.utilk.android.view.UtilKScreen
 import com.mozhimen.basick.utilk.android.view.UtilKWindowManager
 import com.mozhimen.basick.utilk.android.widget.showToastOnMain
-import com.mozhimen.basick.utilk.androidx.lifecycle.handleLifecycleEventOnDestroy
 import com.mozhimen.basick.utilk.androidx.lifecycle.handleLifecycleEventOnStart
 import com.mozhimen.basick.utilk.androidx.lifecycle.handleLifecycleEventOnStop
 import com.mozhimen.basick.utilk.java.lang.UtilKThread
@@ -143,10 +142,10 @@ class LogKPrinterMonitorDelegate : ILogKPrinter, ILogKPrinterMonitor, BaseUtilK(
 
     override fun open(isFold: Boolean) {
         if (_isOpen) return
-        if (!UtilKPermission.hasOverlay()) {
+        if (!UtilKPermission.hasSystemAlertWindow()) {
             LogK.etk(TAG, "PrinterMonitor play app has no overlay permission")
             "请打开悬浮窗权限".showToastOnMain()
-            UtilKLaunchActivity.startManageOverlay(_context)
+            UtilKActivityStart.startManageOverlayPermission(_context)
             return
         }
         try {
