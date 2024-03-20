@@ -160,8 +160,8 @@ open class LogKPrinterFile() : ILogKPrinter, BaseUtilK() {
 
     private fun getLogFileName(): String =
             when (_createLogFileDateType) {
-                EDateType.HOUR -> "${UtilKFile.getStrFileNameForStrCurrentHour()}.txt"
-                else -> "${UtilKFile.getStrFileNameForStrToday()}.txt"
+                EDateType.HOUR -> "${UtilKFile.getStrFileName_ofCurrentHour()}.txt"
+                else -> "${UtilKFile.getStrFileName_ofToday()}.txt"
             }
 
     /**
