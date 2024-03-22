@@ -95,7 +95,7 @@ class LogKProvider : ILogK, IUtilK {
         }
         if (config.getStackTraceDepth() > 0 || (config.getStackTraceDepth() <= 0 && priority >= CLog.ERROR)) {
             val stackTrace: String? = _logKFormatterStackTraces.format(
-                UtilKStackTraceElement.getCroppedRealStackTracks(
+                UtilKStackTraceElement.gets_ofRealCropped(
                     Throwable().stackTrace, _logKPackageName,
                     if (config.getStackTraceDepth() <= 0) 5
                     else config.getStackTraceDepth()

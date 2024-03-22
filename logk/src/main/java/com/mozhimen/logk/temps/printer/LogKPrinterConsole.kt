@@ -1,7 +1,7 @@
 package com.mozhimen.logk.temps.printer
 
 import com.mozhimen.basick.elemk.cons.CMsg
-import com.mozhimen.basick.utilk.android.util.log
+import com.mozhimen.basick.utilk.android.util.println
 import com.mozhimen.logk.bases.BaseLogKConfig
 import com.mozhimen.logk.bases.BaseLogKPrinter
 import com.mozhimen.logk.cons.CLogKCons
@@ -39,10 +39,10 @@ class LogKPrinterConsole(private val _ignoreLineBreak: Boolean = false) : BaseLo
                 printlog(priority, tag, m)
         }
 
-        (getName() + CMsg.PART_LINE_HOR).log(priority, tag)
+        (getName() + CMsg.PART_LINE_HOR).println(priority, tag)
     }
 
     private fun printlog(level: Int, tag: String, msg: String) {
-        msg.log(level, tag)
+        msg.println(level, tag)
     }
 }

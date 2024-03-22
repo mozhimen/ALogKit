@@ -18,12 +18,12 @@ import com.mozhimen.basick.elemk.android.view.cons.CWinMgr
 import com.mozhimen.basick.elemk.kotlin.properties.VarProperty_SetVaryNonnull
 import com.mozhimen.basick.lintk.optins.permission.OPermission_SYSTEM_ALERT_WINDOW
 import com.mozhimen.basick.utilk.bases.BaseUtilK
-import com.mozhimen.basick.utilk.android.UtilKPermission
+import com.mozhimen.basick.utilk.wrapper.UtilKPermission
 import com.mozhimen.basick.utilk.android.app.UtilKActivityStart
-import com.mozhimen.basick.utilk.android.content.UtilKRes
+import com.mozhimen.basick.utilk.wrapper.UtilKRes
 import com.mozhimen.basick.utilk.android.os.UtilKBuildVersion
 import com.mozhimen.basick.utilk.android.util.e
-import com.mozhimen.basick.utilk.android.view.UtilKScreen
+import com.mozhimen.basick.utilk.wrapper.UtilKScreen
 import com.mozhimen.basick.utilk.android.view.UtilKWindowManager
 import com.mozhimen.basick.utilk.android.widget.showToastOnMain
 import com.mozhimen.basick.utilk.androidx.lifecycle.handleLifecycleEventOnStart

@@ -6,7 +6,7 @@ import androidx.annotation.ColorInt
 import com.mozhimen.basick.elemk.android.util.annors.ALog
 import com.mozhimen.basick.elemk.android.util.cons.CLog
 import com.mozhimen.basick.utilk.android.content.UtilKPackage
-import com.mozhimen.basick.utilk.android.content.UtilKRes
+import com.mozhimen.basick.utilk.wrapper.UtilKRes
 import com.mozhimen.basick.utilk.kotlin.text.replaceRegexLineBreak
 import com.mozhimen.xmlk.recyclerk.item.RecyclerKItem
 import com.mozhimen.xmlk.vhk.VHKRecyclerVDB
