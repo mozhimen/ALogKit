@@ -4,9 +4,10 @@ import com.mozhimen.basick.elemk.java.util.cons.EDateType
 import com.mozhimen.basick.utilk.bases.BaseUtilK
 import com.mozhimen.logk.commons.ILogKPrinter
 import com.mozhimen.logk.bases.BaseLogKConfig
-import com.mozhimen.basick.utilk.java.io.UtilKFile
 import com.mozhimen.basick.utilk.android.util.e
+import com.mozhimen.basick.utilk.java.io.UtilKFileWrapper
 import com.mozhimen.basick.utilk.java.io.getFileCreateTime
+import com.mozhimen.basick.utilk.kotlin.UtilKStrFile
 import com.mozhimen.basick.utilk.kotlin.UtilKStrPath
 import com.mozhimen.basick.utilk.kotlin.createFolder
 import com.mozhimen.basick.utilk.kotlin.getFolderFiles
@@ -160,8 +161,8 @@ open class LogKPrinterFile() : ILogKPrinter, BaseUtilK() {
 
     private fun getLogFileName(): String =
             when (_createLogFileDateType) {
-                EDateType.HOUR -> "${UtilKFile.getStrFileName_ofCurrentHour()}.txt"
-                else -> "${UtilKFile.getStrFileName_ofToday()}.txt"
+                EDateType.HOUR -> "${UtilKStrFile.getStrFileName_ofCurrentHour()}.txt"
+                else -> "${UtilKStrFile.getStrFileName_ofToday()}.txt"
             }
 
     /**
@@ -205,7 +206,7 @@ open class LogKPrinterFile() : ILogKPrinter, BaseUtilK() {
 
             // 当log文件不存在时创建log文件
             try {
-                UtilKFile.createFile(_logFile!!)
+                UtilKFileWrapper.createFile(_logFile!!)
                 _bufferedWriter = BufferedWriter(FileWriter(_logFile, true))
             } catch (e: Exception) {
                 e.printStackTrace()
