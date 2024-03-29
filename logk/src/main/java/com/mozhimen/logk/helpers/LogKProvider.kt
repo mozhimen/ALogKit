@@ -4,7 +4,6 @@ import com.mozhimen.basick.elemk.android.util.annors.ALog
 import com.mozhimen.basick.elemk.android.util.cons.CLog
 import com.mozhimen.basick.lintk.optins.OApiInit_InApplication
 import com.mozhimen.basick.utilk.commons.IUtilK
-import com.mozhimen.basick.utilk.java.lang.UtilKStackTraceElement
 import com.mozhimen.basick.utilk.kotlin.getStrPackage
 import com.mozhimen.logk.LogK
 import com.mozhimen.logk.LogKMgr
@@ -13,7 +12,7 @@ import com.mozhimen.logk.commons.ILogK
 import com.mozhimen.logk.commons.ILogKPrinter
 import com.mozhimen.logk.temps.formatter.LogKFormatterStackTraces
 import com.mozhimen.logk.temps.formatter.LogKFormatterThread
-import java.lang.StringBuilder
+import com.mozhimen.logk.utils.StackTraceElementUtil
 
 
 /**
@@ -95,7 +94,7 @@ class LogKProvider : ILogK, IUtilK {
         }
         if (config.getStackTraceDepth() > 0 || (config.getStackTraceDepth() <= 0 && priority >= CLog.ERROR)) {
             val stackTrace: String? = _logKFormatterStackTraces.format(
-                UtilKStackTraceElement.gets_ofRealCropped(
+                StackTraceElementUtil.gets_ofRealCropped(
                     Throwable().stackTrace, _logKPackageName,
                     if (config.getStackTraceDepth() <= 0) 5
                     else config.getStackTraceDepth()
