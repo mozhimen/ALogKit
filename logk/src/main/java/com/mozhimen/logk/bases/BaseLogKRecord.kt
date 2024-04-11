@@ -8,7 +8,6 @@ import com.mozhimen.basick.utilk.kotlin.intLogPriority2strLogSimple
  * @ClassName LogKMo
  * @Description TODO
  * @Author Kolin Zhao / Mozhimen
- * @Date 2021/12/20 16:46
  * @Version 1.0
  */
 open class BaseLogKRecord(var timeMillis: Long, var priority: Int, var tag: String, var msg: String) {

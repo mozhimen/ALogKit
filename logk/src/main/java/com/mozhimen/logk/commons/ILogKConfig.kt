@@ -7,7 +7,6 @@ import com.mozhimen.basick.utilk.commons.IUtilK
  * @ClassName ILogKConfig
  * @Description TODO
  * @Author Mozhimen & Kolin Zhao
- * @Date 2023/8/10 13:09
  * @Version 1.0
  */
 interface ILogKConfig : IUtilK {

@@ -28,7 +28,6 @@ import java.util.concurrent.LinkedBlockingQueue
  * 3、文件操作，BufferedWriter的应用；
  * 如果是外部路径需要确保已经有外部存储的读写权限
  * @Author Kolin Zhao / Mozhimen
- * @Date 2021/12/20 17:33
  * @Version 1.0
  */
 open class LogKPrinterFile() : ILogKPrinter, BaseUtilK() {

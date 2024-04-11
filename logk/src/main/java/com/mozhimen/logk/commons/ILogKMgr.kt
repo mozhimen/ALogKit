@@ -6,7 +6,6 @@ import com.mozhimen.logk.bases.BaseLogKConfig
  * @ClassName ILogKMgr
  * @Description TODO
  * @Author Mozhimen / Kolin Zhao
- * @Date 2023/6/4 14:19
  * @Version 1.0
  */
 interface ILogKMgr {

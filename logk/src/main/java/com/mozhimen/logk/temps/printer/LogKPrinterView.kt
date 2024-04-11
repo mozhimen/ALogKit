@@ -15,7 +15,6 @@ import com.mozhimen.logk.bases.BaseLogKConfig
  * @ClassName ViewPrinter
  * @Description TODO
  * @Author Kolin Zhao / Mozhimen
- * @Date 2021/12/20 17:20
  * @Version 1.0
  */
 @OptIn(OApiInit_ByLazy::class, OApiCall_BindLifecycle::class, OApiInit_InApplication::class)
