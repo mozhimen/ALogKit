@@ -3,7 +3,6 @@ package com.mozhimen.logk.bases
 import com.mozhimen.basick.elemk.java.util.cons.CDateFormat
 import com.mozhimen.basick.utilk.java.util.UtilKDateWrapper
 import com.mozhimen.basick.utilk.kotlin.intLogPriority2strLogPriority_ofSimple
-
 /**
  * @ClassName LogKMo
  * @Description TODO
