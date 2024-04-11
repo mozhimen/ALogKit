@@ -17,7 +17,6 @@ import com.mozhimen.logk.databinding.LogkPrinterViewItemBinding
  * @ClassName PrinterViewItem
  * @Description TODO
  * @Author Kolin Zhao / Mozhimen
- * @Date 2022/9/23 11:51
  * @Version 1.0
  */
 class LogKPrinterItem<R : BaseLogKRecord>(private val _record: R) : RecyclerKItem<VHKRecyclerVDB<LogkPrinterViewItemBinding>>() {

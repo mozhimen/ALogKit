@@ -10,7 +10,6 @@ import com.mozhimen.logk.cons.CLogKCons
  * @ClassName ConsolePrinter
  * @Description TODO
  * @Author Kolin Zhao / Mozhimen
- * @Date 2021/12/20 17:02
  * @Version 1.0
  */
 class LogKPrinterConsole(private val _ignoreLineBreak: Boolean = false) : BaseLogKPrinter() {

@@ -7,7 +7,6 @@ import java.lang.StringBuilder
  * @ClassName StackTraceFormatter
  * @Description 堆栈信息格式化
  * @Author Kolin Zhao / Mozhimen
- * @Date 2021/12/20 16:37
  * @Version 1.0
  */
 class LogKFormatterStackTraces: ILogKFormatter<Array<StackTraceElement?>> {

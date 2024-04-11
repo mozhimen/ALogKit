@@ -9,7 +9,6 @@ import com.mozhimen.logk.commons.ILogKPrinter
  * @ClassName LogKConfig
  * @Description TODO
  * @Author Kolin Zhao / Mozhimen
- * @Date 2021/12/20 17:04
  * @Version 1.0
  */
 open class BaseLogKConfig : ILogKConfig {

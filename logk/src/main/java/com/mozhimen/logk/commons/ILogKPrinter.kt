@@ -7,7 +7,6 @@ import com.mozhimen.logk.bases.BaseLogKConfig
  * @ClassName ILogKPrinter
  * @Description TODO
  * @Author Kolin Zhao / Mozhimen
- * @Date 2021/12/20 16:35
  * @Version 1.0
  */
 interface ILogKPrinter : IUtilK {
