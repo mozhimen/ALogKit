@@ -3,6 +3,7 @@ package com.mozhimen.logk.test
 import android.annotation.SuppressLint
 import android.os.Bundle
 import android.util.Log
+import com.mozhimen.basick.utilk.android.util.UtilKLogWrapper
 import com.mozhimen.basick.elemk.androidx.appcompat.bases.databinding.BaseActivityVDB
 import com.mozhimen.basick.elemk.android.util.cons.CLog
 import com.mozhimen.basick.lintk.optins.OApiInit_InApplication
@@ -19,7 +20,7 @@ class LogKActivity : BaseActivityVDB<ActivityLogkBinding>() {
     private val _printerView: LogKPrinterView<LogKActivity> by lazy { LogKPrinterView(this) }
     private val _printerMonitor: LogKPrinterMonitor by lazy {
         LogKMgr.instance.getPrinters().filterIsInstance<LogKPrinterMonitor>().getOrNull(0) ?: kotlin.run {
-            Log.d(TAG, "_printerMonitor: init")
+            UtilKLogWrapper.d(TAG, "_printerMonitor: init")
             LogKPrinterMonitor().also { LogKMgr.instance.addPrinter(it) }
         }
     }
