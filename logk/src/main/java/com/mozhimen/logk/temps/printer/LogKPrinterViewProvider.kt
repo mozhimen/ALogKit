@@ -18,7 +18,7 @@ import com.mozhimen.logk.bases.BaseLogKConfig
 import com.mozhimen.logk.bases.BaseLogKRecord
 import com.mozhimen.logk.commons.ILogKPrinter
 import com.mozhimen.logk.cons.CLogKCons
-import com.mozhimen.xmlk.recyclerk.item.AdapterKItemRecyclerStuffed
+import com.mozhimen.xmlk.recyclerk.item.RecyclerKItemAdapterStuffed
 
 /**
  * @ClassName ViewPrinterProvider
@@ -32,7 +32,7 @@ class LogKPrinterViewProvider(
     private val _rootView: FrameLayout
 ) : ILogKPrinter {
 
-    private val _adapterKRecyclerStuffed by lazy { AdapterKItemRecyclerStuffed() }
+    private val _adapterKRecyclerStuffed by lazy { RecyclerKItemAdapterStuffed() }
     private val TITLE_OPEN_PANEL by lazy { UtilKRes.getString_ofContext(R.string.logk_view_provider_title_open) }
     private val TITLE_CLOSE_PANEL by lazy { UtilKRes.getString_ofContext(R.string.logk_view_provider_title_close) }
 

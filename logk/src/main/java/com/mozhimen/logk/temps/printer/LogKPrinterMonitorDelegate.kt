@@ -35,7 +35,7 @@ import com.mozhimen.logk.bases.BaseLogKRecord
 import com.mozhimen.logk.commons.ILogKPrinter
 import com.mozhimen.logk.commons.ILogKPrinterMonitor
 import com.mozhimen.logk.cons.CLogKCons
-import com.mozhimen.xmlk.recyclerk.item.AdapterKItemRecycler
+import com.mozhimen.xmlk.recyclerk.item.RecyclerKItemAdapter
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
@@ -61,7 +61,7 @@ class LogKPrinterMonitorDelegate : ILogKPrinter, ILogKPrinterMonitor, BaseUtilK(
             return frameLayout.also { field = it }
         }
     private val _windowManager: WindowManager by lazy { UtilKWindowManager.get(_context) }
-    private val _adapterKItemRecycler by lazy { AdapterKItemRecycler() }
+    private val _adapterKItemRecycler by lazy { RecyclerKItemAdapter() }
 
     private var _recyclerView: RecyclerView? = null
         get() {
