@@ -145,7 +145,7 @@ class LogKPrinterMonitorDelegate : ILogKPrinter, ILogKPrinterMonitor, BaseUtilK(
         if (!UtilKPermission.hasSystemAlertWindow()) {
             LogK.etk(TAG, "PrinterMonitor play app has no overlay permission")
             "请打开悬浮窗权限".showToastOnMain()
-            UtilKActivityStart.startManageOverlayPermission(_context)
+            UtilKActivityStart.startSettingManageOverlayPermission(_context)
             return
         }
         try {
