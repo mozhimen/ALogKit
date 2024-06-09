@@ -43,6 +43,7 @@ dependencies {
     implementation project(':SwiftKit:xmlk')
     implementation project(':AXmlKit:recyclerk')
     implementation project(':AXmlKit:vhk')
+    implementation project(':ASerialKit:serialk_moshi')
 
     //test
     testImplementation 'junit:junit:4.13.2'

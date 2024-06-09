@@ -21,6 +21,7 @@ dependencyResolutionManagement {
 rootProject.name = "ALogKit"
 include ':app'
 include ':logk'
+include ':logk_timber'
 //SwiftKit
 include ':SwiftKit'
 project(':SwiftKit').projectDir = new File("D:\\WorkSpace\\GitHub\\SwiftKit")
@@ -31,4 +32,7 @@ include ':AXmlKit'
 project(':AXmlKit').projectDir = new File("D:\\WorkSpace\\GitHub\\AXmlKit")
 include ':AXmlKit:recyclerk'
 include ':AXmlKit:vhk'
-include ':logk_timber'
+//ASerialKit
+include ':ASerialKit'
+project(':ASerialKit').projectDir = new File("D:\\WorkSpace\\GitHub\\ASerialKit")
+include ':ASerialKit:serialk_moshi'
