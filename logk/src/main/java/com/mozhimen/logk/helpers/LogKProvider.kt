@@ -4,6 +4,7 @@ import com.mozhimen.basick.elemk.android.util.annors.ALog
 import com.mozhimen.basick.elemk.android.util.cons.CLog
 import com.mozhimen.basick.lintk.optins.OApiInit_InApplication
 import com.mozhimen.basick.utilk.commons.IUtilK
+import com.mozhimen.basick.utilk.kotlin.UtilKLazyJVM.lazy_ofNone
 import com.mozhimen.basick.utilk.kotlin.getStrPackage
 import com.mozhimen.logk.LogK
 import com.mozhimen.logk.LogKMgr
@@ -24,7 +25,7 @@ import com.mozhimen.logk.utils.StackTraceElementUtil
  */
 @OptIn(OApiInit_InApplication::class)
 class LogKProvider : ILogK, IUtilK {
-    private val _logKPackageName: String by lazy { LogK::class.java.getStrPackage() }
+    private val _logKPackageName: String by lazy_ofNone { LogK::class.java.getStrPackage() }
     private val _logKFormatterThread: LogKFormatterThread by lazy { LogKFormatterThread() }
     private val _logKFormatterStackTraces: LogKFormatterStackTraces by lazy { LogKFormatterStackTraces() }
 

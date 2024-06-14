@@ -17,7 +17,7 @@ import com.mozhimen.logk.test.databinding.ActivityLogkBinding
 
 @OptIn(OApiInit_InApplication::class, OPermission_SYSTEM_ALERT_WINDOW::class)
 class LogKActivity : BaseActivityVDB<ActivityLogkBinding>() {
-    private val _printerView: LogKPrinterView<LogKActivity> by lazy { LogKPrinterView(this) }
+    private val _printerView: LogKPrinterView<LogKActivity> by lazy_ofNone { LogKPrinterView(this) }
     private val _printerMonitor: LogKPrinterMonitor by lazy {
         LogKMgr.instance.getPrinters().filterIsInstance<LogKPrinterMonitor>().getOrNull(0) ?: kotlin.run {
             UtilKLogWrapper.d(TAG, "_printerMonitor: init")

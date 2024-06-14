@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.mozhimen.basick.utilk.wrapper.UtilKRes
 import com.mozhimen.basick.utilk.android.util.dp2px
+import com.mozhimen.basick.utilk.kotlin.UtilKLazyJVM
 import com.mozhimen.basick.utilk.wrapper.UtilKScreen
 import com.mozhimen.logk.R
 import com.mozhimen.logk.bases.BaseLogKConfig
@@ -32,9 +33,9 @@ class LogKPrinterViewProvider(
     private val _rootView: FrameLayout
 ) : ILogKPrinter {
 
-    private val _adapterKRecyclerStuffed by lazy { RecyclerKItemAdapterStuffed() }
-    private val TITLE_OPEN_PANEL by lazy { UtilKRes.getString_ofContext(R.string.logk_view_provider_title_open) }
-    private val TITLE_CLOSE_PANEL by lazy { UtilKRes.getString_ofContext(R.string.logk_view_provider_title_close) }
+    private val _adapterKRecyclerStuffed by UtilKLazyJVM.lazy_ofNone { RecyclerKItemAdapterStuffed() }
+    private val TITLE_OPEN_PANEL by UtilKLazyJVM.lazy_ofNone { UtilKRes.getString_ofContext(R.string.logk_view_provider_title_open) }
+    private val TITLE_CLOSE_PANEL by UtilKLazyJVM.lazy_ofNone { UtilKRes.getString_ofContext(R.string.logk_view_provider_title_close) }
 
     private var _recyclerView: RecyclerView? = null
         get() {

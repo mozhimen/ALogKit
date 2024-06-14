@@ -7,6 +7,7 @@ import com.mozhimen.basick.elemk.androidx.lifecycle.bases.BaseWakeBefPauseLifecy
 import com.mozhimen.basick.lintk.optins.OApiCall_BindLifecycle
 import com.mozhimen.basick.lintk.optins.OApiInit_InApplication
 import com.mozhimen.basick.utilk.android.app.getContentView
+import com.mozhimen.basick.utilk.kotlin.UtilKLazyJVM.lazy_ofNone
 import com.mozhimen.logk.LogKMgr
 import com.mozhimen.logk.commons.ILogKPrinter
 import com.mozhimen.logk.bases.BaseLogKConfig
@@ -19,7 +20,7 @@ import com.mozhimen.logk.bases.BaseLogKConfig
  */
 @OptIn(OApiInit_ByLazy::class, OApiCall_BindLifecycle::class, OApiInit_InApplication::class)
 class LogKPrinterView<A>(owner: A) : ILogKPrinter, BaseWakeBefPauseLifecycleObserver() where A : Activity, A : LifecycleOwner {
-    private val _viewProvider: LogKPrinterViewProvider by lazy { LogKPrinterViewProvider(owner, owner.getContentView()) }
+    private val _viewProvider: LogKPrinterViewProvider by lazy_ofNone { LogKPrinterViewProvider(owner, owner.getContentView()) }
     private var _isFold = false
     private var _isShow: Boolean = false
         set(value) {

@@ -29,6 +29,7 @@ import com.mozhimen.basick.utilk.android.widget.showToastOnMain
 import com.mozhimen.basick.utilk.androidx.lifecycle.handleLifecycleEventOnStart
 import com.mozhimen.basick.utilk.androidx.lifecycle.handleLifecycleEventOnStop
 import com.mozhimen.basick.utilk.java.lang.UtilKThread
+import com.mozhimen.basick.utilk.kotlin.UtilKLazyJVM.lazy_ofNone
 import com.mozhimen.logk.LogK
 import com.mozhimen.logk.bases.BaseLogKConfig
 import com.mozhimen.logk.bases.BaseLogKRecord
@@ -48,10 +49,10 @@ import kotlinx.coroutines.launch
  */
 @OPermission_SYSTEM_ALERT_WINDOW
 class LogKPrinterMonitorDelegate : ILogKPrinter, ILogKPrinterMonitor, BaseUtilK(), LifecycleOwner {
-    private val TITLE_OPEN_PANEL by lazy { UtilKRes.getString_ofContext(com.mozhimen.logk.R.string.logk_view_provider_title_open) }
-    private val TITLE_CLOSE_PANEL by lazy { UtilKRes.getString_ofContext(com.mozhimen.logk.R.string.logk_view_provider_title_close) }
+    private val TITLE_OPEN_PANEL by lazy_ofNone { UtilKRes.getString_ofContext(com.mozhimen.logk.R.string.logk_view_provider_title_open) }
+    private val TITLE_CLOSE_PANEL by lazy_ofNone { UtilKRes.getString_ofContext(com.mozhimen.logk.R.string.logk_view_provider_title_close) }
 
-    private val _layoutParams: WindowManager.LayoutParams by lazy { WindowManager.LayoutParams() }
+    private val _layoutParams: WindowManager.LayoutParams by lazy_ofNone { WindowManager.LayoutParams() }
     private var _rootView: FrameLayout? = null
         @SuppressLint("InflateParams")
         get() {
@@ -60,8 +61,8 @@ class LogKPrinterMonitorDelegate : ILogKPrinter, ILogKPrinterMonitor, BaseUtilK(
             frameLayout.tag = CLogKCons.TAG_LOGK_MONITOR_VIEW
             return frameLayout.also { field = it }
         }
-    private val _windowManager: WindowManager by lazy { UtilKWindowManager.get(_context) }
-    private val _adapterKItemRecycler by lazy { RecyclerKItemAdapter() }
+    private val _windowManager: WindowManager by lazy_ofNone { UtilKWindowManager.get(_context) }
+    private val _adapterKItemRecycler by lazy_ofNone { RecyclerKItemAdapter() }
 
     private var _recyclerView: RecyclerView? = null
         get() {
