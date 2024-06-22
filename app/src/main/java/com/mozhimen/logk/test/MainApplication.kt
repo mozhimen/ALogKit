@@ -4,7 +4,7 @@ import com.mozhimen.basick.elemk.android.app.bases.BaseApplication
 import com.mozhimen.basick.lintk.optins.OApiInit_InApplication
 import com.mozhimen.basick.lintk.optins.OApiMultiDex_InApplication
 import com.mozhimen.basick.lintk.optins.permission.OPermission_SYSTEM_ALERT_WINDOW
-import com.mozhimen.basick.utilk.squareup.moshi.t2strJson_ofMoshi
+import com.mozhimen.serialk.moshi.t2strJson_ofMoshi
 import com.mozhimen.logk.LogKMgr
 import com.mozhimen.logk.bases.BaseLogKConfig
 import com.mozhimen.logk.commons.ILogKJsonParser
