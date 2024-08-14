@@ -3,7 +3,6 @@ package com.mozhimen.logk.temps.printer
 import android.app.Activity
 import com.mozhimen.basick.lintk.optins.OApiInit_InApplication
 import com.mozhimen.basick.lintk.optins.permission.OPermission_SYSTEM_ALERT_WINDOW
-import com.mozhimen.basick.manifestk.cons.CPermission
 import com.mozhimen.basick.stackk.cb.StackKCb
 import com.mozhimen.basick.stackk.commons.IStackKListener
 import com.mozhimen.basick.utilk.commons.IUtilK
@@ -11,7 +10,6 @@ import com.mozhimen.logk.LogK
 import com.mozhimen.logk.bases.BaseLogKConfig
 import com.mozhimen.logk.commons.ILogKPrinter
 import com.mozhimen.logk.commons.ILogKPrinterMonitor
-import java.lang.ref.WeakReference
 
 /**
  * @ClassName PrinterMonitor
@@ -29,7 +27,7 @@ class LogKPrinterMonitor : ILogKPrinter, ILogKPrinterMonitor, IUtilK {
 
     init {
         StackKCb.instance.addFrontBackListener(object : IStackKListener {
-            override fun onChanged(isFront: Boolean, activityRef: WeakReference<Activity>?) {
+            override fun onChanged(isFront: Boolean, activity: Activity) {
                 if (!isFront && isOpen()) {
                     LogK.wtk(TAG, "PrinterMonitor onChanged log stop")
                     _logKPrinterMonitorDelegate.close()

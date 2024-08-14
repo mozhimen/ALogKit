@@ -1,6 +1,7 @@
 package com.mozhimen.logk.bases
 
 import com.mozhimen.basick.elemk.java.util.cons.CDateFormat
+import com.mozhimen.basick.utilk.java.text.UtilKSimpleDateFormatFormat
 import com.mozhimen.basick.utilk.java.util.UtilKDateWrapper
 import com.mozhimen.basick.utilk.kotlin.intLogPriority2strLogPriority_ofSimple
 /**
@@ -15,5 +16,5 @@ open class BaseLogKRecord(var timeMillis: Long, var priority: Int, var tag: Stri
         getFlattened() + msg
 
     open fun getFlattened(): String =
-        "${UtilKDateWrapper.longDate2strDate(timeMillis, CDateFormat.yyyy_MM_dd_HH_mm_ss)} | Level: ${priority.intLogPriority2strLogPriority_ofSimple()} | Tag: $tag : "
+        "${UtilKSimpleDateFormatFormat.longDate2strDate(timeMillis, CDateFormat.Format.yyyy_MM_dd_HH_mm_ss)} | Level: ${priority.intLogPriority2strLogPriority_ofSimple()} | Tag: $tag : "
 }
