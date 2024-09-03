@@ -1,11 +1,11 @@
 package com.mozhimen.logk.temps.printer
 
 import android.app.Activity
-import com.mozhimen.basick.lintk.optins.OApiInit_InApplication
-import com.mozhimen.basick.lintk.optins.permission.OPermission_SYSTEM_ALERT_WINDOW
+import com.mozhimen.kotlin.lintk.optins.OApiInit_InApplication
+import com.mozhimen.kotlin.lintk.optins.permission.OPermission_SYSTEM_ALERT_WINDOW
 import com.mozhimen.basick.stackk.cb.StackKCb
 import com.mozhimen.basick.stackk.commons.IStackKListener
-import com.mozhimen.basick.utilk.commons.IUtilK
+import com.mozhimen.kotlin.utilk.commons.IUtilK
 import com.mozhimen.logk.LogK
 import com.mozhimen.logk.bases.BaseLogKConfig
 import com.mozhimen.logk.commons.ILogKPrinter

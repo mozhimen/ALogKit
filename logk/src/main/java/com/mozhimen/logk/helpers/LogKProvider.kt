@@ -1,11 +1,11 @@
 package com.mozhimen.logk.helpers
 
-import com.mozhimen.basick.elemk.android.util.annors.ALog
-import com.mozhimen.basick.elemk.android.util.cons.CLog
-import com.mozhimen.basick.lintk.optins.OApiInit_InApplication
-import com.mozhimen.basick.utilk.commons.IUtilK
-import com.mozhimen.basick.utilk.kotlin.UtilKLazyJVM.lazy_ofNone
-import com.mozhimen.basick.utilk.kotlin.getStrPackage
+import com.mozhimen.kotlin.elemk.android.util.annors.ALog
+import com.mozhimen.kotlin.elemk.android.util.cons.CLog
+import com.mozhimen.kotlin.lintk.optins.OApiInit_InApplication
+import com.mozhimen.kotlin.utilk.commons.IUtilK
+import com.mozhimen.kotlin.utilk.kotlin.UtilKLazyJVM.lazy_ofNone
+import com.mozhimen.kotlin.utilk.kotlin.getStrPackage
 import com.mozhimen.logk.LogK
 import com.mozhimen.logk.LogKMgr
 import com.mozhimen.logk.bases.BaseLogKConfig

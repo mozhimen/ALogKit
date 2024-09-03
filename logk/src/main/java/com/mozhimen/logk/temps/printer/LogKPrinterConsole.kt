@@ -1,7 +1,7 @@
 package com.mozhimen.logk.temps.printer
 
-import com.mozhimen.basick.elemk.cons.CMsg
-import com.mozhimen.basick.utilk.android.util.println
+import com.mozhimen.kotlin.elemk.cons.CMsg
+import com.mozhimen.kotlin.utilk.android.util.println
 import com.mozhimen.logk.bases.BaseLogKConfig
 import com.mozhimen.logk.bases.BaseLogKPrinter
 import com.mozhimen.logk.cons.CLogKCons

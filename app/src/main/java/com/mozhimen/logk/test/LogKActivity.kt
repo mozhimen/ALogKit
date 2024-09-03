@@ -3,11 +3,11 @@ package com.mozhimen.logk.test
 import android.annotation.SuppressLint
 import android.os.Bundle
 import android.util.Log
-import com.mozhimen.basick.utilk.android.util.UtilKLogWrapper
-import com.mozhimen.basick.elemk.androidx.appcompat.bases.databinding.BaseActivityVDB
-import com.mozhimen.basick.elemk.android.util.cons.CLog
-import com.mozhimen.basick.lintk.optins.OApiInit_InApplication
-import com.mozhimen.basick.lintk.optins.permission.OPermission_SYSTEM_ALERT_WINDOW
+import com.mozhimen.kotlin.utilk.android.util.UtilKLogWrapper
+import com.mozhimen.kotlin.elemk.androidx.appcompat.bases.databinding.BaseActivityVDB
+import com.mozhimen.kotlin.elemk.android.util.cons.CLog
+import com.mozhimen.kotlin.lintk.optins.OApiInit_InApplication
+import com.mozhimen.kotlin.lintk.optins.permission.OPermission_SYSTEM_ALERT_WINDOW
 import com.mozhimen.logk.LogK
 import com.mozhimen.logk.LogKMgr
 import com.mozhimen.logk.bases.BaseLogKConfig

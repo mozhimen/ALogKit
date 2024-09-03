@@ -1,9 +1,9 @@
 package com.mozhimen.logk.bases
 
-import com.mozhimen.basick.elemk.java.util.cons.CDateFormat
-import com.mozhimen.basick.utilk.java.text.UtilKSimpleDateFormatFormat
-import com.mozhimen.basick.utilk.java.util.UtilKDateWrapper
-import com.mozhimen.basick.utilk.kotlin.intLogPriority2strLogPriority_ofSimple
+import com.mozhimen.kotlin.elemk.java.util.cons.CDateFormat
+import com.mozhimen.kotlin.utilk.java.text.UtilKSimpleDateFormatFormat
+import com.mozhimen.kotlin.utilk.java.util.UtilKDateWrapper
+import com.mozhimen.kotlin.utilk.kotlin.intLogPriority2strLogPriority_ofSimple
 /**
  * @ClassName LogKMo
  * @Description TODO

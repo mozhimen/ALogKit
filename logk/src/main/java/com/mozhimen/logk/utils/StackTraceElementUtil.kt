@@ -1,6 +1,6 @@
 package com.mozhimen.logk.utils
 
-import com.mozhimen.basick.utilk.java.lang.UtilKStackTraceElement
+import com.mozhimen.kotlin.utilk.java.lang.UtilKStackTraceElement
 
 /**
  * @ClassName StackTraceElementUtil

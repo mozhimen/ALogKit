@@ -2,12 +2,12 @@ package com.mozhimen.logk.temps.printer
 
 import android.app.Activity
 import androidx.lifecycle.LifecycleOwner
-import com.mozhimen.basick.lintk.optins.OApiInit_ByLazy
-import com.mozhimen.basick.elemk.androidx.lifecycle.bases.BaseWakeBefPauseLifecycleObserver
-import com.mozhimen.basick.lintk.optins.OApiCall_BindLifecycle
-import com.mozhimen.basick.lintk.optins.OApiInit_InApplication
-import com.mozhimen.basick.utilk.android.app.getContentView
-import com.mozhimen.basick.utilk.kotlin.UtilKLazyJVM.lazy_ofNone
+import com.mozhimen.kotlin.lintk.optins.OApiInit_ByLazy
+import com.mozhimen.kotlin.elemk.androidx.lifecycle.bases.BaseWakeBefPauseLifecycleObserver
+import com.mozhimen.kotlin.lintk.optins.OApiCall_BindLifecycle
+import com.mozhimen.kotlin.lintk.optins.OApiInit_InApplication
+import com.mozhimen.kotlin.utilk.android.app.getContentView
+import com.mozhimen.kotlin.utilk.kotlin.UtilKLazyJVM.lazy_ofNone
 import com.mozhimen.logk.LogKMgr
 import com.mozhimen.logk.commons.ILogKPrinter
 import com.mozhimen.logk.bases.BaseLogKConfig

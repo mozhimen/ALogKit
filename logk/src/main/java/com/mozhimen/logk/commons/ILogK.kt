@@ -1,6 +1,6 @@
 package com.mozhimen.logk.commons
 
-import com.mozhimen.basick.elemk.android.util.annors.ALog
+import com.mozhimen.kotlin.elemk.android.util.annors.ALog
 import com.mozhimen.logk.bases.BaseLogKConfig
 
 

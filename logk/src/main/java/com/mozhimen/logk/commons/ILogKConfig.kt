@@ -1,6 +1,6 @@
 package com.mozhimen.logk.commons
 
-import com.mozhimen.basick.utilk.commons.IUtilK
+import com.mozhimen.kotlin.utilk.commons.IUtilK
 
 
 /**
