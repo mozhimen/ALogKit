@@ -11,19 +11,7 @@ import com.mozhimen.logk.basic.commons.ILogKRecord
  * @Author Kolin Zhao / Mozhimen
  * @Version 1.0
  */
-open class BaseLogKRecord(var timeMillis: Long, var priority: Int, var tag: String, var msg: String) : ILogKRecord {
-
-    override fun getPriority(): Int {
-        return priority
-    }
-
-    override fun getTag(): String {
-        return tag
-    }
-
-    override fun getMsg(): String {
-        return msg
-    }
+open class BaseLogKRecord(var timeMillis: Long, override var priority: Int, override var tag: String, override var msg: String) : ILogKRecord {
 
     override fun flattenedLog(): String =
         getFlattened() + msg

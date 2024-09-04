@@ -9,9 +9,9 @@ package com.mozhimen.logk.basic.commons
  * @Version 1.0
  */
 interface ILogKRecord {
-    fun getPriority(): Int
-    fun getTag(): String
-    fun getMsg(): String
+    var priority: Int
+    var tag: String
+    var msg: String
     fun flattenedLog(): String
     fun getFlattened(): String
 }
