@@ -1,6 +1,6 @@
 package com.mozhimen.logk.temps.formatter
 
-import com.mozhimen.logk.commons.ILogKFormatter
+import com.mozhimen.logk.basic.commons.ILogKFormatter
 import java.lang.StringBuilder
 
 /**

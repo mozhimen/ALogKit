@@ -2,7 +2,8 @@ package com.mozhimen.logk.bases
 
 import com.mozhimen.kotlin.elemk.cons.CMsg
 import com.mozhimen.kotlin.utilk.android.util.println
-import com.mozhimen.logk.commons.ILogKPrinter
+import com.mozhimen.logk.basic.commons.ILogKConfig
+import com.mozhimen.logk.basic.commons.ILogKPrinter
 
 /**
  * @ClassName BaseLogKPrinter
@@ -12,7 +13,7 @@ import com.mozhimen.logk.commons.ILogKPrinter
  * @Version 1.0
  */
 open class BaseLogKPrinter : ILogKPrinter {
-    override fun print(config: BaseLogKConfig, priority: Int, tag: String, msg: String) {
+    override fun print(config: ILogKConfig, priority: Int, tag: String, msg: String) {
         (getName() + CMsg.PART_LINE_HOR).println(priority, tag)
     }
 }

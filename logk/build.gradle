@@ -1,7 +1,6 @@
 plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
-    id 'kotlin-kapt'
 }
 
 android {
@@ -29,9 +28,7 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-    buildFeatures {
-        dataBinding true
-    }
+
     lintOptions {
         checkReleaseBuilds false
         abortOnError false
@@ -41,9 +38,8 @@ android {
 dependencies {
     implementation project(':SwiftKit:basick')
     implementation project(':SwiftKit:xmlk')
-    implementation project(':AXmlKit:recyclerk')
-    implementation project(':AXmlKit:vhk')
     implementation project(':ASerialKit:serialk_moshi')
+    implementation project(project.path.replace(project.name,'')+':basic')
 
     //test
     testImplementation 'junit:junit:4.13.2'

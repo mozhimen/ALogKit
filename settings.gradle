@@ -22,6 +22,10 @@ rootProject.name = "ALogKit"
 include ':app'
 include ':logk'
 include ':logk_timber'
+include ':basic'
+include ':logk_view'
+include ':logk_monitor'
+include ':logk_cache'
 //KUtilKit
 include ':KUtilKit'
 project(':KUtilKit').projectDir = new File("D:\\WorkSpace\\GitHub\\KUtilKit")
@@ -31,6 +35,7 @@ include ':KUtilKit:utilk_kotlin'
 include ':SwiftKit'
 project(':SwiftKit').projectDir = new File("D:\\WorkSpace\\GitHub\\SwiftKit")
 include ':SwiftKit:basick'
+include ':SwiftKit:mvvmk'
 include ':SwiftKit:xmlk'
 //AXmlKit
 include ':AXmlKit'
@@ -45,3 +50,15 @@ include ':ASerialKit:serialk_moshi'
 include ':ALibKit_Squareup'
 project(':ALibKit_Squareup').projectDir = new File("D:\\WorkSpace\\GitHub\\ALibKit_Squareup")
 include ':ALibKit_Squareup:moshi'
+//AStackK
+include ':AStackKit'
+project(':AStackKit').projectDir = new File("D:\\WorkSpace\\GitHub\\AStackKit")
+include ':AStackKit:stackk'
+include ':AStackKit:stackk_callback'
+include ':AStackKit:basic'
+//ALibKit_Jetpack
+include ':ALibKit_Jetpack'
+project(':ALibKit_Jetpack').projectDir = new File("D:\\WorkSpace\\GitHub\\ALibKit_Jetpack")
+include ':ALibKit_Jetpack:room'
+
+include ':logk_file'

@@ -2,9 +2,10 @@ package com.mozhimen.logk
 
 import com.mozhimen.kotlin.lintk.optins.OApiInit_InApplication
 import com.mozhimen.kotlin.utilk.kotlin.collections.containsBy
-import com.mozhimen.logk.commons.ILogKPrinter
 import com.mozhimen.logk.bases.BaseLogKConfig
-import com.mozhimen.logk.commons.ILogKMgr
+import com.mozhimen.logk.basic.commons.ILogKConfig
+import com.mozhimen.logk.basic.commons.ILogKMgr
+import com.mozhimen.logk.basic.commons.ILogKPrinter
 import com.mozhimen.logk.temps.printer.LogKPrinterConsole
 
 /**
@@ -38,16 +39,16 @@ class LogKMgr(/*private val config: LogKConfig, printers: Array<out IPrinter>*/)
     /////////////////////////////////////////////////////////////////////////////////////
 
     private val _printers: MutableList<ILogKPrinter> = mutableListOf(LogKPrinterConsole())
-    private var _config: BaseLogKConfig? = null
+    private var _config: ILogKConfig? = null
 
     /////////////////////////////////////////////////////////////////////////////////////
 
-    override fun init(config: BaseLogKConfig, vararg printers: ILogKPrinter) {
+    override fun init(config: ILogKConfig, vararg printers: ILogKPrinter) {
         _config = config
         _printers.addAll(printers.filter { o -> !_printers.containsBy { it.getName() == o.getName() } })
     }
 
-    override fun getConfig(): BaseLogKConfig =
+    override fun getConfig(): ILogKConfig =
         _config ?: BaseLogKConfig()
 
     override fun getPrinters(): List<ILogKPrinter> =

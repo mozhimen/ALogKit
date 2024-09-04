@@ -41,10 +41,10 @@ android {
 }
 
 dependencies {
-
-    implementation project(':SwiftKit:basick')
+    implementation project(':SwiftKit:mvvmk')
+    implementation project(':AStackKit:stackk')
+    implementation project(':ASerialKit:serialk_moshi')
     implementation project(':logk')
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
 
     //test
     testImplementation 'junit:junit:4.13.2'

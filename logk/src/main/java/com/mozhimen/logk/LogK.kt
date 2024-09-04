@@ -1,6 +1,6 @@
 package com.mozhimen.logk
 
-import com.mozhimen.logk.commons.ILogK
+import com.mozhimen.logk.basic.commons.ILogK
 import com.mozhimen.logk.helpers.LogKProvider
 
 /**

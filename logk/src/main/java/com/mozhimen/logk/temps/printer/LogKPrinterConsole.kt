@@ -4,7 +4,8 @@ import com.mozhimen.kotlin.elemk.cons.CMsg
 import com.mozhimen.kotlin.utilk.android.util.println
 import com.mozhimen.logk.bases.BaseLogKConfig
 import com.mozhimen.logk.bases.BaseLogKPrinter
-import com.mozhimen.logk.cons.CLogKCons
+import com.mozhimen.logk.basic.commons.ILogKConfig
+import com.mozhimen.logk.basic.cons.CLogKCons
 
 /**
  * @ClassName ConsolePrinter
@@ -14,17 +15,17 @@ import com.mozhimen.logk.cons.CLogKCons
  */
 class LogKPrinterConsole(private val _ignoreLineBreak: Boolean = false) : BaseLogKPrinter() {
 
-    override fun print(config: BaseLogKConfig, priority: Int, tag: String, msg: String) {
+    override fun print(config: ILogKConfig, priority: Int, tag: String, msg: String) {
         super.print(config, priority, tag, msg)
 
         if (_ignoreLineBreak) {
             val length = msg.length
-            val countOfSub = length / CLogKCons.LOG_MAX_LEN
+            val countOfSub = length / com.mozhimen.logk.basic.cons.CLogKCons.LOG_MAX_LEN
             if (countOfSub > 0) {
                 var index = 0
                 for (i in 0 until countOfSub) {
-                    printlog(priority, tag, msg.substring(index, index + CLogKCons.LOG_MAX_LEN))
-                    index += CLogKCons.LOG_MAX_LEN
+                    printlog(priority, tag, msg.substring(index, index + com.mozhimen.logk.basic.cons.CLogKCons.LOG_MAX_LEN))
+                    index += com.mozhimen.logk.basic.cons.CLogKCons.LOG_MAX_LEN
                 }
                 if (index != length) printlog(priority, tag, msg.substring(index, length))
             } else

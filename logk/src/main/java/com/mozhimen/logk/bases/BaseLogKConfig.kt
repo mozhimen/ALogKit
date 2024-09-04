@@ -1,8 +1,8 @@
 package com.mozhimen.logk.bases
 
-import com.mozhimen.logk.commons.ILogKConfig
-import com.mozhimen.logk.commons.ILogKJsonParser
-import com.mozhimen.logk.commons.ILogKPrinter
+import com.mozhimen.logk.basic.commons.ILogKConfig
+import com.mozhimen.logk.basic.commons.ILogKJsonParser
+import com.mozhimen.logk.basic.commons.ILogKPrinter
 import com.mozhimen.serialk.moshi.t2strJson_ofMoshi
 
 /**

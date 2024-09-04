@@ -8,9 +8,9 @@ import com.mozhimen.kotlin.utilk.kotlin.UtilKLazyJVM.lazy_ofNone
 import com.mozhimen.kotlin.utilk.kotlin.getStrPackage
 import com.mozhimen.logk.LogK
 import com.mozhimen.logk.LogKMgr
-import com.mozhimen.logk.bases.BaseLogKConfig
-import com.mozhimen.logk.commons.ILogK
-import com.mozhimen.logk.commons.ILogKPrinter
+import com.mozhimen.logk.basic.commons.ILogK
+import com.mozhimen.logk.basic.commons.ILogKConfig
+import com.mozhimen.logk.basic.commons.ILogKPrinter
 import com.mozhimen.logk.temps.formatter.LogKFormatterStackTraces
 import com.mozhimen.logk.temps.formatter.LogKFormatterThread
 import com.mozhimen.logk.utils.StackTraceElementUtil
@@ -85,7 +85,7 @@ class LogKProvider : ILogK, IUtilK {
         logk(LogKMgr.instance.getConfig(), priority, tag, *contents)
     }
 
-    override fun logk(config: BaseLogKConfig, @ALog priority: Int, tag: String, vararg contents: Any?) {
+    override fun logk(config: ILogKConfig, @ALog priority: Int, tag: String, vararg contents: Any?) {
         if (!config.isEnable()) return
 
         val stringBuilder = StringBuilder()
@@ -121,7 +121,7 @@ class LogKProvider : ILogK, IUtilK {
             printer.print(config, priority, tag, stringBuilder.toString().replace("[", "").replace("]", ""))
     }
 
-    private fun parseBody(contents: Array<out Any?>, config: BaseLogKConfig): String {
+    private fun parseBody(contents: Array<out Any?>, config: ILogKConfig): String {
         if (config.injectJsonParser() != null)
             return config.injectJsonParser()!!.toJson(contents)
 
