@@ -12,7 +12,7 @@ import com.mozhimen.logk.bases.BaseLogKConfig
 import com.mozhimen.logk.monitor.LogKPrinterMonitor
 import com.mozhimen.logk.temps.printer.LogKPrinterView
 import com.mozhimen.logk.test.databinding.ActivityLogkBinding
-import com.mozhimen.mvvmk.bases.activity.databinding.BaseActivityVDB
+import com.mozhimen.bindk.bases.activity.databinding.BaseActivityVDB
 
 @OptIn(OApiInit_InApplication::class, OPermission_SYSTEM_ALERT_WINDOW::class)
 class LogKActivity : BaseActivityVDB<ActivityLogkBinding>() {
