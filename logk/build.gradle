@@ -39,7 +39,7 @@ dependencies {
     implementation project(':SwiftKit:basick')
     implementation project(':SwiftKit:xmlk')
     implementation project(':ASerialKit:serialk_moshi')
-    implementation project(project.path.replace(project.name,'')+':basic')
+    api project(project.path.replace(project.name,'')+':basic')
 
     //test
     testImplementation 'junit:junit:4.13.2'
