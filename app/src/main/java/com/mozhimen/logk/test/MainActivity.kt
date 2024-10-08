@@ -5,7 +5,8 @@ import android.view.View
 import com.mozhimen.kotlin.utilk.android.content.startContext
 import com.mozhimen.logk.LogK
 import com.mozhimen.logk.test.databinding.ActivityMainBinding
-import com.mozhimen.bindk.bases.activity.databinding.BaseActivityVDB
+import com.mozhimen.bindk.bases.viewdatabinding.activity.BaseActivityVDB
+
 
 class MainActivity : BaseActivityVDB<ActivityMainBinding>() {
     override fun initView(savedInstanceState: Bundle?) {
