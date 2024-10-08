@@ -3,13 +3,13 @@ package com.mozhimen.logk.test
 import com.mozhimen.kotlin.lintk.optins.OApiInit_InApplication
 import com.mozhimen.kotlin.lintk.optins.OApiMultiDex_InApplication
 import com.mozhimen.kotlin.lintk.optins.permission.OPermission_SYSTEM_ALERT_WINDOW
+import com.mozhimen.logk.LogK
 import com.mozhimen.serialk.moshi.t2strJson_ofMoshi
 import com.mozhimen.logk.LogKMgr
 import com.mozhimen.logk.bases.BaseLogKConfig
-import com.mozhimen.logk.commons.ILogKJsonParser
+import com.mozhimen.logk.basic.commons.ILogKJsonParser
 import com.mozhimen.logk.temps.printer.LogKPrinterConsole
 import com.mozhimen.logk.file.LogKPrinterFile
-import com.mozhimen.logk.monitor.LogKPrinterMonitor
 import com.mozhimen.stackk.bases.BaseApplication
 
 /**
@@ -26,7 +26,7 @@ class MainApplication : BaseApplication() {
         super.onCreate()
 
         //logk
-        LogKMgr.instance.init(_logkConfig, LogKPrinterConsole(), com.mozhimen.logk.file.LogKPrinterFile(retentionDay = 3), com.mozhimen.logk.monitor.LogKPrinterMonitor())
+        LogKMgr.instance.init(_logkConfig, LogKPrinterConsole(), LogKPrinterFile(retentionDay = 3), com.mozhimen.logk.monitor.LogKPrinterMonitor(LogK))
     }
 
     private val _logkConfig = object : BaseLogKConfig() {

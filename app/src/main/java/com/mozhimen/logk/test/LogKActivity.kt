@@ -9,19 +9,18 @@ import com.mozhimen.kotlin.utilk.kotlin.UtilKLazyJVM.lazy_ofNone
 import com.mozhimen.logk.LogK
 import com.mozhimen.logk.LogKMgr
 import com.mozhimen.logk.bases.BaseLogKConfig
-import com.mozhimen.logk.monitor.LogKPrinterMonitor
-import com.mozhimen.logk.temps.printer.LogKPrinterView
 import com.mozhimen.logk.test.databinding.ActivityLogkBinding
 import com.mozhimen.bindk.bases.viewdatabinding.activity.BaseActivityVDB
+import com.mozhimen.logk.view.LogKPrinterView
 
 
 @OptIn(OApiInit_InApplication::class, OPermission_SYSTEM_ALERT_WINDOW::class)
 class LogKActivity : BaseActivityVDB<ActivityLogkBinding>() {
-    private val _printerView: LogKPrinterView<LogKActivity> by lazy_ofNone { LogKPrinterView(this) }
+    private val _printerView: LogKPrinterView<LogKActivity> by lazy_ofNone { LogKPrinterView(this, LogKMgr.instance) }
     private val _printerMonitor: com.mozhimen.logk.monitor.LogKPrinterMonitor by lazy {
         LogKMgr.instance.getPrinters().filterIsInstance<com.mozhimen.logk.monitor.LogKPrinterMonitor>().getOrNull(0) ?: kotlin.run {
             UtilKLogWrapper.d(TAG, "_printerMonitor: init")
-            com.mozhimen.logk.monitor.LogKPrinterMonitor().also { LogKMgr.instance.addPrinter(it) }
+            com.mozhimen.logk.monitor.LogKPrinterMonitor(LogK).also { LogKMgr.instance.addPrinter(it) }
         }
     }
 

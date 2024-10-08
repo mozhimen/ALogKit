@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -28,11 +29,15 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    buildFeatures{
+        dataBinding true
+    }
 }
 
 dependencies {
     implementation project(':AStackKit:stackk_callback')
     implementation project(':AXmlKit:recyclerk')
+    implementation project(':AXmlKit:vhk')
     implementation project(project.path.replace(project.name,'')+':basic')
     implementation project(project.path.replace(project.name,'')+':logk_view')
     implementation project(':KUtilKit:utilk_android')
