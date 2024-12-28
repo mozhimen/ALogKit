@@ -17,5 +17,5 @@ open class BaseLogKRecord(var timeMillis: Long, override var priority: Int, over
         getFlattened() + msg
 
     override fun getFlattened(): String =
-        "${UtilKSimpleDateFormatFormat.longDate2strDate(timeMillis, CDateFormat.Format.yyyy_MM_dd_HH_mm_ss)} | Level: ${priority.intLogPriority2strLogPriority_ofSimple()} | Tag: $tag : "
+        "${UtilKSimpleDateFormatFormat.longDate2strDate(timeMillis, CDateFormat.Format.`yyyy-MM-dd_HH_mm_ss`)} | Level: ${priority.intLogPriority2strLogPriority_ofSimple()} | Tag: $tag : "
 }
