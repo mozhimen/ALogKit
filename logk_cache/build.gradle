@@ -13,13 +13,13 @@ android {
         multiDexEnabled true
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        consumerProguardFiles "consumer-rules.pro"
+//        consumerProguardFiles "consumer-rules.pro"
     }
 
     buildTypes {
         release {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+//            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
     compileOptions {
@@ -32,11 +32,12 @@ android {
 }
 
 dependencies {
-    implementation project(project.path.replace(project.name,'')+':basic')
+    implementation project(project.path.replace(project.name,'')+':logk_basic')
     implementation project(project.path.replace(project.name,'')+':logk_file')
-    implementation project(':SwiftKit:basick')
+    implementation project(':ASwiftKit:basick')
     implementation project(':ALibKit_Jetpack:room')
     kapt 'androidx.room:room-compiler:2.6.1'
+
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'

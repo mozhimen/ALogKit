@@ -12,13 +12,13 @@ android {
         multiDexEnabled true
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-        consumerProguardFiles "consumer-rules.pro"
+//        consumerProguardFiles "consumer-rules.pro"
     }
 
     buildTypes {
         release {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+//            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
     compileOptions {
@@ -36,10 +36,10 @@ android {
 }
 
 dependencies {
-    implementation project(':SwiftKit:basick')
-    implementation project(':SwiftKit:xmlk')
+    implementation project(':ASwiftKit:basick')
+    implementation project(':ASwiftKit:xmlk')
     implementation project(':ASerialKit:serialk_moshi')
-    api project(project.path.replace(project.name,'')+':basic')
+    api project(project.path.replace(project.name,'')+':logk_basic')
 
     //test
     testImplementation 'junit:junit:4.13.2'

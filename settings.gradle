@@ -22,21 +22,26 @@ rootProject.name = "ALogKit"
 include ':app'
 include ':logk'
 include ':logk_timber'
-include ':basic'
+include ':logk_basic'
 include ':logk_view'
 include ':logk_monitor'
 include ':logk_cache'
+include ':logk_file'
+//ALibKit_Jetbrains
+include ':ALibKit_Jetbrains'
+project(':ALibKit_Jetbrains').projectDir = new File("D:\\WorkSpace\\GitHub\\ALibKit_Jetbrains")
+include ':ALibKit_Jetbrains:kotlin_stdlib'
 //KUtilKit
 include ':KUtilKit'
 project(':KUtilKit').projectDir = new File("D:\\WorkSpace\\GitHub\\KUtilKit")
 include ':KUtilKit:utilk_android'
 include ':KUtilKit:utilk_kotlin'
-//SwiftKit
-include ':SwiftKit'
-project(':SwiftKit').projectDir = new File("D:\\WorkSpace\\GitHub\\SwiftKit")
-include ':SwiftKit:basick'
-include ':SwiftKit:bindk'
-include ':SwiftKit:xmlk'
+//ASwiftKit
+include ':ASwiftKit'
+project(':ASwiftKit').projectDir = new File("D:\\WorkSpace\\GitHub\\ASwiftKit")
+include ':ASwiftKit:basick'
+include ':ASwiftKit:bindk'
+include ':ASwiftKit:xmlk'
 //AXmlKit
 include ':AXmlKit'
 project(':AXmlKit').projectDir = new File("D:\\WorkSpace\\GitHub\\AXmlKit")
@@ -56,9 +61,9 @@ project(':AStackKit').projectDir = new File("D:\\WorkSpace\\GitHub\\AStackKit")
 include ':AStackKit:stackk'
 include ':AStackKit:stackk_callback'
 include ':AStackKit:basic'
+include ':AStackKit:stackk_basic'
 //ALibKit_Jetpack
 include ':ALibKit_Jetpack'
 project(':ALibKit_Jetpack').projectDir = new File("D:\\WorkSpace\\GitHub\\ALibKit_Jetpack")
 include ':ALibKit_Jetpack:room'
 
-include ':logk_file'
