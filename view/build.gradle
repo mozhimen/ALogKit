@@ -42,7 +42,7 @@ dependencies {
     implementation project(':ASwiftKit:basick')
     implementation project(':AXmlKit:recyclerk')
     implementation project(':AXmlKit:vhk')
-    api project(project.path.replace(project.name,'')+':logk_basic')
+    api project(project.path.replace(project.name,'')+':basic')
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'

@@ -38,8 +38,8 @@ android {
 dependencies {
     implementation project(':ASwiftKit:basick')
     implementation project(':ASwiftKit:xmlk')
-    implementation project(':ASerialKit:serialk_moshi')
-    api project(project.path.replace(project.name,'')+':logk_basic')
+    implementation project(':ASerialKit:moshi')
+    api project(project.path.replace(project.name,'')+':basic')
 
     //test
     testImplementation 'junit:junit:4.13.2'

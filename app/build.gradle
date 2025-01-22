@@ -43,11 +43,11 @@ android {
 dependencies {
     implementation project(':ASwiftKit:bindk')
     implementation project(':AStackKit:stackk')
-    implementation project(':ASerialKit:serialk_moshi')
+    implementation project(':ASerialKit:moshi')
     implementation project(':logk')
-    implementation project(':logk_monitor')
-    implementation project(':logk_view')
-    implementation project(':logk_file')
+    implementation project(':monitor')
+    implementation project(':view')
+    implementation project(':file')
 
     //test
     testImplementation 'junit:junit:4.13.2'

@@ -32,8 +32,8 @@ android {
 }
 
 dependencies {
-    implementation project(project.path.replace(project.name,'')+':logk_basic')
-    implementation project(project.path.replace(project.name,'')+':logk_file')
+    implementation project(project.path.replace(project.name,'')+':basic')
+    implementation project(project.path.replace(project.name,'')+':file')
     implementation project(':ASwiftKit:basick')
     implementation project(':ALibKit_Jetpack:room')
     kapt 'androidx.room:room-compiler:2.6.1'

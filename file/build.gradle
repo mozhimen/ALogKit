@@ -1,11 +1,10 @@
 plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
-    id 'kotlin-kapt'
 }
 
 android {
-    namespace 'com.mozhimen.logk.monitor'
+    namespace 'com.mozhimen.logk.file'
     compileSdk 34
 
     defaultConfig {
@@ -29,18 +28,11 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-    buildFeatures{
-        dataBinding true
-    }
 }
 
 dependencies {
-    implementation project(':AStackKit:stackk_callback')
-    implementation project(':AXmlKit:recyclerk')
-    implementation project(':AXmlKit:vhk')
-    implementation project(project.path.replace(project.name,'')+':logk_basic')
-    implementation project(project.path.replace(project.name,'')+':logk_view')
-    implementation project(':KUtilKit:utilk_android')
+    implementation project(':KUtilKit:android')
+    api project(project.path.replace(project.name,'')+':basic')
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
