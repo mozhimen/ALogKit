@@ -10,7 +10,7 @@ import com.mozhimen.logk.LogK
 import com.mozhimen.logk.LogKMgr
 import com.mozhimen.logk.bases.BaseLogKConfig
 import com.mozhimen.logk.test.databinding.ActivityLogkBinding
-import com.mozhimen.bindk.bases.viewdatabinding.activity.BaseActivityVDB
+import com.mozhimen.uik.databinding.bases.viewdatabinding.activity.BaseActivityVDB
 import com.mozhimen.logk.view.LogKPrinterView
 
 
