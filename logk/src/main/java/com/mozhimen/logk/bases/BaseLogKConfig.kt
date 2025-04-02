@@ -3,7 +3,7 @@ package com.mozhimen.logk.bases
 import com.mozhimen.logk.basic.commons.ILogKConfig
 import com.mozhimen.logk.basic.commons.ILogKJsonParser
 import com.mozhimen.logk.basic.commons.ILogKPrinter
-import com.mozhimen.serialk.moshi.t2strJson_ofMoshi
+import com.mozhimen.serialk.moshi.t2strJson_moshi
 
 /**
  * @ClassName LogKConfig
@@ -15,7 +15,7 @@ open class BaseLogKConfig : ILogKConfig {
     override fun injectJsonParser(): ILogKJsonParser? =
         object : ILogKJsonParser {
             override fun toJson(src: Any): String =
-                src.t2strJson_ofMoshi()
+                src.t2strJson_moshi()
         }
 
     override fun getGlobalTag(): String =
