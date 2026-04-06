@@ -3,8 +3,8 @@ package com.mozhimen.logk.test
 import android.os.Bundle
 import com.mozhimen.kotlin.utilk.android.util.UtilKLogWrapper
 import com.mozhimen.kotlin.elemk.android.util.cons.CLog
-import com.mozhimen.kotlin.lintk.optins.OApiInit_InApplication
-import com.mozhimen.kotlin.lintk.optins.permission.OPermission_SYSTEM_ALERT_WINDOW
+import com.mozhimen.kotlin.lintk.optins.api.OApiInit_InApplication
+import com.mozhimen.kotlin.lintk.optins.manifest.uses_permission.OUsesPermission_SYSTEM_ALERT_WINDOW
 import com.mozhimen.kotlin.utilk.kotlin.UtilKLazyJVM.lazy_ofNone
 import com.mozhimen.logk.LogK
 import com.mozhimen.logk.LogKMgr
@@ -14,7 +14,7 @@ import com.mozhimen.uik.databinding.bases.viewdatabinding.activity.BaseActivityV
 import com.mozhimen.logk.view.LogKPrinterView
 
 
-@OptIn(OApiInit_InApplication::class, OPermission_SYSTEM_ALERT_WINDOW::class)
+@OptIn(OApiInit_InApplication::class, OUsesPermission_SYSTEM_ALERT_WINDOW::class)
 class LogKActivity : BaseActivityVDB<ActivityLogkBinding>() {
     private val _printerView: LogKPrinterView<LogKActivity> by lazy_ofNone { LogKPrinterView(this, LogKMgr.instance) }
     private val _printerMonitor: com.mozhimen.logk.monitor.LogKPrinterMonitor by lazy {

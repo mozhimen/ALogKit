@@ -1,8 +1,8 @@
 package com.mozhimen.logk.monitor
 
 import android.app.Activity
-import com.mozhimen.kotlin.lintk.optins.OApiInit_InApplication
-import com.mozhimen.kotlin.lintk.optins.permission.OPermission_SYSTEM_ALERT_WINDOW
+import com.mozhimen.kotlin.lintk.optins.api.OApiInit_InApplication
+import com.mozhimen.kotlin.lintk.optins.manifest.uses_permission.OUsesPermission_SYSTEM_ALERT_WINDOW
 import com.mozhimen.kotlin.utilk.commons.IUtilK
 import com.mozhimen.logk.basic.commons.ILogK
 import com.mozhimen.logk.basic.commons.ILogKConfig
@@ -17,7 +17,7 @@ import com.mozhimen.stackk.callback.StackKCb
  * @Author Kolin Zhao / Mozhimen
  * @Version 1.0
  */
-@OPermission_SYSTEM_ALERT_WINDOW
+@OUsesPermission_SYSTEM_ALERT_WINDOW
 @OApiInit_InApplication
 class LogKPrinterMonitor(private val _logk: ILogK) : ILogKPrinter, ILogKPrinterMonitor, IUtilK {
 

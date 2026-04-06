@@ -1,6 +1,6 @@
 package com.mozhimen.logk
 
-import com.mozhimen.kotlin.lintk.optins.OApiInit_InApplication
+import com.mozhimen.kotlin.lintk.optins.api.OApiInit_InApplication
 import com.mozhimen.kotlin.utilk.kotlin.collections.containsBy
 import com.mozhimen.logk.bases.BaseLogKConfig
 import com.mozhimen.logk.basic.commons.ILogKConfig

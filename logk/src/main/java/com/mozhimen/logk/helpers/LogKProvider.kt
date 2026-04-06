@@ -2,7 +2,7 @@ package com.mozhimen.logk.helpers
 
 import com.mozhimen.kotlin.elemk.android.util.annors.ALog
 import com.mozhimen.kotlin.elemk.android.util.cons.CLog
-import com.mozhimen.kotlin.lintk.optins.OApiInit_InApplication
+import com.mozhimen.kotlin.lintk.optins.api.OApiInit_InApplication
 import com.mozhimen.kotlin.utilk.commons.IUtilK
 import com.mozhimen.kotlin.utilk.kotlin.UtilKLazyJVM.lazy_ofNone
 import com.mozhimen.kotlin.utilk.kotlin.getStrPackage
