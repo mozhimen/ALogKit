@@ -36,11 +36,11 @@ android {
 
 dependencies {
     implementation project(':AStackKit:callback')
-    implementation project(':AXmlKit:recyclerk')
-    implementation project(':AXmlKit:vhk')
+    implementation 'com.github.mozhimen.AXmlKit:recyclerk:0.0.1'
+    implementation 'com.github.mozhimen.AXmlKit:vhk:0.0.1'
     implementation project(project.path.replace(project.name,'')+':basic')
     implementation project(project.path.replace(project.name,'')+':view')
-    implementation 'com.github.mozhimen.KUtilKit:android:0.0.2'
+    implementation 'com.github.mozhimen.KUtilKit:android:0.0.3'
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'

@@ -36,13 +36,6 @@ include ':ALibKit_Jetbrains'
 project(':ALibKit_Jetbrains').projectDir = new File("D:\\WorkSpace\\GitHub\\ALibKit_Jetbrains")
 include ':ALibKit_Jetbrains:kotlin_stdlib'
 include ':ALibKit_Jetbrains:kotlinx_coroutines'
-//ALibKit_Jetpack
-include ':ALibKit_Jetpack'
-project(':ALibKit_Jetpack').projectDir = new File("D:\\WorkSpace\\GitHub\\ALibKit_Jetpack")
-include ':ALibKit_Jetpack:room'
-include ':ALibKit_Jetpack:databinding'
-include ':ALibKit_Jetpack:core'
-include ':ALibKit_Jetpack:annotation'
 //ALibKit_Squareup
 include ':ALibKit_Squareup'
 project(':ALibKit_Squareup').projectDir = new File("D:\\WorkSpace\\GitHub\\ALibKit_Squareup")
