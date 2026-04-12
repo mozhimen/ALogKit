@@ -41,9 +41,9 @@ android {
 }
 
 dependencies {
-    implementation 'com.github.mozhimen.ASwiftKit:uik-databinding:2.0.4'
-    implementation project(':AStackKit:stackk')
-    implementation project(':ASerialKit:moshi')
+    implementation 'com.github.mozhimen.ASwiftKit:uik-databinding:2.1.6'
+    implementation 'com.github.mozhimen.AStackKit:stackk:0.0.1'
+    implementation 'com.github.mozhimen.ASerialKit:json-moshi:0.0.2'
     implementation project(':logk')
     implementation project(':monitor')
     implementation project(':view')

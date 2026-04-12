@@ -4,7 +4,7 @@ import com.mozhimen.kotlin.lintk.optins.api.OApiInit_InApplication
 import com.mozhimen.kotlin.lintk.optins.api.OApiMultiDex_InApplication
 import com.mozhimen.kotlin.lintk.optins.manifest.uses_permission.OUsesPermission_SYSTEM_ALERT_WINDOW
 import com.mozhimen.logk.LogK
-import com.mozhimen.serialk.moshi.t2strJson_ofMoshi
+import com.mozhimen.serialk.moshi.t2strJson_moshi
 import com.mozhimen.logk.LogKMgr
 import com.mozhimen.logk.bases.BaseLogKConfig
 import com.mozhimen.logk.basic.commons.ILogKJsonParser
@@ -33,7 +33,7 @@ class MainApplication : BaseApplication() {
         override fun injectJsonParser(): ILogKJsonParser =
             object : ILogKJsonParser {
                 override fun toJson(src: Any): String =
-                    src.t2strJson_ofMoshi()
+                    src.t2strJson_moshi()
             }
 
         override fun getGlobalTag(): String =

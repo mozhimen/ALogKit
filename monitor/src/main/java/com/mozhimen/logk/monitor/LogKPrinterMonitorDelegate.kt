@@ -29,6 +29,7 @@ import com.mozhimen.kotlin.utilk.android.widget.showToastOnMain
 import com.mozhimen.kotlin.utilk.androidx.lifecycle.handleLifecycleEventOnStart
 import com.mozhimen.kotlin.utilk.androidx.lifecycle.handleLifecycleEventOnStop
 import com.mozhimen.kotlin.utilk.java.lang.UtilKThread
+import com.mozhimen.kotlin.utilk.java.lang.UtilKThreadWrapper
 import com.mozhimen.kotlin.utilk.kotlin.UtilKLazyJVM.lazy_ofNone
 import com.mozhimen.logk.basic.bases.BaseLogKRecord
 import com.mozhimen.logk.basic.commons.ILogK
@@ -100,10 +101,10 @@ class LogKPrinterMonitorDelegate(private val _logk: ILogK) : ILogKPrinter, ILogK
     //////////////////////////////////////////////////////////////////////////////////////////////////////
 
     init {
-        _layoutParams.flags = (CWinMgr.Lpf.NOT_TOUCH_MODAL or CWinMgr.Lpf.NOT_FOCUSABLE) or CWinMgr.Lpf.FULLSCREEN
+        _layoutParams.flags = (WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL or WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE) or WindowManager.LayoutParams.FLAG_FULLSCREEN
         _layoutParams.format = PixelFormat.TRANSLUCENT
         _layoutParams.gravity = Gravity.END or Gravity.BOTTOM
-        _layoutParams.type = if (UtilKBuildVersion.isAfterV_26_8_O()) CWinMgr.Lpt.APPLICATION_OVERLAY else CWinMgr.Lpt.TOAST
+        _layoutParams.type = if (UtilKBuildVersion.isAfterV_26_8_O()) WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY else WindowManager.LayoutParams.TYPE_TOAST
     }
 
     //////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -113,7 +114,7 @@ class LogKPrinterMonitorDelegate(private val _logk: ILogK) : ILogKPrinter, ILogK
 
     override fun print(config: ILogKConfig, priority: Int, tag: String, msg: String) {
         if (_isOpen) {
-            if (UtilKThread.isMainThread()) {
+            if (UtilKThreadWrapper.isMainThread()) {
                 printInView(priority, tag, msg)
             } else {
                 lifecycleScope.launch(Dispatchers.Main) {
@@ -146,7 +147,7 @@ class LogKPrinterMonitorDelegate(private val _logk: ILogK) : ILogKPrinter, ILogK
         if (!UtilKPermission.hasSystemAlertWindow()) {
             _logk.etk(TAG, "PrinterMonitor play app has no overlay permission")
             "请打开悬浮窗权限".showToastOnMain()
-            UtilKActivityStart.startSettingManageOverlayPermission(_context)
+            UtilKActivityStart.startSettingsManageOverlayPermission(_context)
             return
         }
         try {

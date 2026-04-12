@@ -39,10 +39,10 @@ android {
 }
 
 dependencies {
-    implementation 'com.github.mozhimen.ASwiftKit:basick:2.0.4'
-    implementation 'com.github.mozhimen.AXmlKit:recyclerk:0.0.1'
-    implementation 'com.github.mozhimen.AXmlKit:vhk:0.0.1'
     api project(project.path.replace(project.name,'')+':basic')
+    implementation 'com.github.mozhimen.ASwiftKit:basick:2.1.6'
+    implementation 'com.github.mozhimen.AXmlKit:recyclerk-item:0.0.5'
+    implementation 'com.github.mozhimen.AXmlKit:vhk:0.0.5'
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
